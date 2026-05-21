@@ -3,7 +3,7 @@ import Link from "next/link";
 export function Footer({ lang = "en" }: { lang?: "en" | "ro" }) {
   return (
     <footer className="px-6 pb-10 pt-6 lg:px-10">
-      <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/40 bg-white/70 px-6 py-6 shadow-[0_24px_80px_rgba(20,20,20,0.08)] backdrop-blur-sm lg:px-8">
+      <div className="mx-auto max-w-7xl rounded-2xl border border-white/40 bg-white/70 px-6 py-6 shadow-[0_24px_80px_rgba(20,20,20,0.08)] backdrop-blur-sm lg:px-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <div className="text-lg font-semibold tracking-tight">LuxCanva</div>

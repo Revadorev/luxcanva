@@ -66,7 +66,7 @@ export default async function ServicesPage({ searchParams }: { searchParams: Pro
       <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">{t.intro}</p>
       <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {t.services.map(([title, text]) => (
-          <article key={title} className="card-premium rounded-[1.75rem] p-6 text-stone-900">
+          <article key={title} className="card-premium rounded-xl p-6 text-stone-900">
             <div className="mb-5 h-px w-12 bg-[var(--gold)]" />
             <h2 className="text-xl font-semibold leading-snug">{title}</h2>
             <p className="mt-4 text-sm leading-7 text-stone-700">{text}</p>

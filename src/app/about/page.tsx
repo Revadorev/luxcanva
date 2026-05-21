@@ -52,7 +52,7 @@ export default async function AboutPage({ searchParams }: { searchParams: Promis
       <div className="mt-8 label-premium inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-stone-600">{t.eyebrow}</div>
       <h1 className="font-display mt-4 text-5xl tracking-tight">{t.title}</h1>
       <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">{t.intro}</p>
-      <div className="mt-10 grid gap-4 rounded-[2rem] bg-white/70 p-6 shadow-[0_24px_80px_rgba(20,20,20,0.08)] backdrop-blur-sm">
+      <div className="mt-10 grid gap-4 rounded-2xl bg-white/70 p-6 shadow-[0_24px_80px_rgba(20,20,20,0.08)] backdrop-blur-sm">
         {t.body.map((p) => <p key={p} className="text-lg leading-8 text-stone-700">{p}</p>)}
       </div>
       <Footer lang={lang} />

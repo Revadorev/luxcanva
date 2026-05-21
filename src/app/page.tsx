@@ -178,7 +178,7 @@ export default async function Home({
 
       <section className="px-6 pb-10 pt-8 lg:px-10 lg:pb-16 lg:pt-10">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_.95fr]">
-          <div className="card-premium rounded-[2rem] p-8 sm:p-10 lg:p-14">
+          <div className="card-premium rounded-2xl p-8 sm:p-10 lg:p-14">
             <div className="label-premium inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-stone-600">
               {t.topLabel}
             </div>
@@ -202,14 +202,14 @@ export default async function Home({
 
           <div className="grid gap-6">
             <div className="grid gap-6 md:grid-cols-[1.1fr_.9fr]">
-              <div className="overflow-hidden rounded-[2rem] border border-white/50 shadow-[0_30px_80px_rgba(20,20,20,0.12)]">
+              <div className="overflow-hidden rounded-xl border border-white/50 shadow-[0_30px_80px_rgba(20,20,20,0.12)]">
                 <div className="aspect-[4/5] bg-[linear-gradient(rgba(15,15,16,.18),rgba(15,15,16,.18)),url(https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80)] bg-cover bg-center" />
               </div>
               <div className="grid gap-6">
-                <div className="overflow-hidden rounded-[2rem] border border-white/50 shadow-[0_30px_80px_rgba(20,20,20,0.12)]">
+                <div className="overflow-hidden rounded-xl border border-white/50 shadow-[0_30px_80px_rgba(20,20,20,0.12)]">
                   <div className="aspect-[4/3] bg-[linear-gradient(rgba(15,15,16,.12),rgba(15,15,16,.12)),url(https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=1200&q=80)] bg-cover bg-center" />
                 </div>
-                <div className="card-premium rounded-[2rem] p-6">
+                <div className="card-premium rounded-2xl p-6">
                   <p className="text-xs uppercase tracking-[0.26em] text-stone-500">Workshop Notes</p>
                   <div className="mt-4 space-y-4">
                     {t.heroStats.map(([value, label]) => (
@@ -228,7 +228,7 @@ export default async function Home({
                 "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
                 "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
               ].map((url, i) => (
-                <div key={url} className="overflow-hidden rounded-[1.6rem] border border-white/50 shadow-[0_24px_60px_rgba(20,20,20,0.08)]">
+                <div key={url} className="overflow-hidden rounded-xl border border-white/50 shadow-[0_24px_60px_rgba(20,20,20,0.08)]">
                   <div className={`aspect-[5/4] bg-cover bg-center ${i === 0 ? "" : ""}`} style={{ backgroundImage: `linear-gradient(rgba(15,15,16,.14),rgba(15,15,16,.14)), url(${url})` }} />
                 </div>
               ))}
@@ -244,7 +244,7 @@ export default async function Home({
       <Section title={t.whyTitle} intro={t.whyIntro}>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {t.why.map((item) => (
-            <div key={item} className="card-premium rounded-[1.75rem] p-5 text-stone-800">
+            <div key={item} className="card-premium rounded-xl p-5 text-stone-800">
               <div className="mb-4 h-px w-12 bg-[var(--gold)]" />
               <p className="text-sm leading-7">{item}</p>
             </div>
@@ -254,12 +254,12 @@ export default async function Home({
 
       <Section title={t.premiumTitle} intro={t.premiumIntro}>
         <div className="grid gap-6 lg:grid-cols-[.9fr_1.1fr]">
-          <div className="overflow-hidden rounded-[2rem] border border-white/50 shadow-[0_30px_80px_rgba(20,20,20,0.12)]">
+          <div className="overflow-hidden rounded-xl border border-white/50 shadow-[0_30px_80px_rgba(20,20,20,0.12)]">
             <div className="aspect-[4/5] bg-[linear-gradient(rgba(15,15,16,.16),rgba(15,15,16,.16)),url(https://images.unsplash.com/photo-1490127252417-7c393f993ee4?auto=format&fit=crop&w=1400&q=80)] bg-cover bg-center" />
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {t.premium.map((item) => (
-              <div key={item} className="card-premium rounded-[1.75rem] p-6">
+              <div key={item} className="card-premium rounded-xl p-6">
                 <div className="label-premium mb-4 inline-flex rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-stone-500">Premium</div>
                 <p className="text-base leading-7 text-stone-800">{item}</p>
               </div>
@@ -271,7 +271,7 @@ export default async function Home({
       <Section title={t.workflowTitle} intro="" dark>
         <div className="grid gap-4 lg:grid-cols-5">
           {t.workflow.map(([nr, title, text]) => (
-            <div key={nr} className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 text-white backdrop-blur-sm">
+            <div key={nr} className="border-l-2 border-[var(--gold-soft)] bg-white/5 p-6 text-white">
               <div className="font-display text-4xl text-[var(--gold-soft)]">{nr}</div>
               <h3 className="mt-4 text-lg font-semibold">{title}</h3>
               <p className="mt-3 text-sm leading-7 text-stone-300">{text}</p>
@@ -282,7 +282,7 @@ export default async function Home({
 
       <section id="contact" className="px-6 py-16 lg:px-10 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_.9fr]">
-          <div className="card-premium rounded-[2rem] p-8 sm:p-10 lg:p-12">
+          <div className="card-premium rounded-2xl p-8 sm:p-10 lg:p-12">
             <div className="label-premium inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-stone-600">Contact</div>
             <h2 className="font-display mt-6 text-4xl leading-tight sm:text-5xl">{t.contactTitle}</h2>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-700">{t.contactText}</p>
@@ -292,7 +292,7 @@ export default async function Home({
             </div>
           </div>
 
-          <div className="card-premium rounded-[2rem] p-6 sm:p-8">
+          <div className="card-premium rounded-2xl p-6 sm:p-8">
             <form className="grid gap-3">
               {t.formFields.map((f) => (
                 <input key={f} placeholder={f} className="rounded-[1.2rem] border border-stone-900/10 bg-white/85 px-4 py-3.5 text-sm outline-none" />
@@ -329,7 +329,7 @@ function Grid({ items, dark = false }: { items: { title: string; text?: string }
   return (
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {items.map((item) => (
-        <article key={item.title} className={`${dark ? "border-white/10 bg-white/5 text-white" : "card-premium text-stone-900"} rounded-[1.75rem] border p-6`}>
+        <article key={item.title} className={`${dark ? "border-white/10 bg-white/5 text-white" : "card-premium text-stone-900"} rounded-xl border p-6`}>
           <div className={`${dark ? "bg-[var(--gold-soft)]" : "bg-[var(--gold)]"} mb-5 h-px w-12`} />
           <h3 className="text-xl font-semibold leading-snug">{item.title}</h3>
           {item.text ? <p className={`${dark ? "text-stone-300" : "lang-inactive"} mt-4 text-sm leading-7`}>{item.text}</p> : null}

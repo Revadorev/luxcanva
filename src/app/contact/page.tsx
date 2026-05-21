@@ -97,12 +97,12 @@ export default function ContactPage({ searchParams }: { searchParams: { lang?: s
       <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">{t.intro}</p>
 
       {status === "success" ? (
-        <div className="card-premium mt-10 rounded-[2rem] p-10 text-center">
+        <div className="card-premium mt-10 rounded-2xl p-10 text-center">
           <p className="text-2xl font-semibold text-stone-900">{t.successTitle}</p>
           <p className="mt-3 text-stone-600">{t.successText}</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="card-premium mt-10 grid gap-3 rounded-[2rem] p-6">
+        <form onSubmit={handleSubmit} className="card-premium mt-10 grid gap-3 rounded-2xl p-6">
           {t.fields.map((f) => (
             <input
               key={f.name}
@@ -112,7 +112,7 @@ export default function ContactPage({ searchParams }: { searchParams: { lang?: s
               value={form[f.name] || ""}
               onChange={handleChange}
               required={f.name === "email"}
-              className="rounded-[1.2rem] border border-stone-900/10 bg-white/85 px-4 py-3.5 text-sm outline-none"
+              className="rounded-lg border border-stone-900/10 bg-white/85 px-4 py-3.5 text-sm outline-none"
             />
           ))}
           <textarea
@@ -121,7 +121,7 @@ export default function ContactPage({ searchParams }: { searchParams: { lang?: s
             rows={6}
             value={form.message || ""}
             onChange={handleChange}
-            className="rounded-[1.2rem] border border-stone-900/10 bg-white/85 px-4 py-3.5 text-sm outline-none"
+            className="rounded-lg border border-stone-900/10 bg-white/85 px-4 py-3.5 text-sm outline-none"
           />
           {status === "error" && <p className="text-sm text-red-600">{t.errorText}</p>}
           <button type="submit" disabled={status === "sending"} className="btn-dark">

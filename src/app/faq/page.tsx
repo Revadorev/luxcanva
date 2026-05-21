@@ -61,7 +61,7 @@ export default async function FaqPage({ searchParams }: { searchParams: Promise<
       <h1 className="font-display mt-4 text-5xl tracking-tight">{t.title}</h1>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
         {t.faqs.map(([q, a]) => (
-          <article key={q} className="card-premium rounded-[1.75rem] p-6 text-stone-900">
+          <article key={q} className="card-premium rounded-xl p-6 text-stone-900">
             <div className="mb-5 h-px w-12 bg-[var(--gold)]" />
             <h2 className="text-xl font-semibold leading-snug">{q}</h2>
             <p className="mt-4 text-sm leading-7 text-stone-700">{a}</p>
