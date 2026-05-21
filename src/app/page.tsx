@@ -1,132 +1,70 @@
 import Link from "next/link";
 
-const images = {
-  hero: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80",
-  atelier: "https://images.unsplash.com/photo-1490127252417-7c393f993ee4?auto=format&fit=crop&w=1200&q=80",
-  packaging: "https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=1200&q=80",
-  interiors: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-};
-
 const content = {
   en: {
     nav: { home: "Home", about: "About", services: "Services", faq: "FAQ", contact: "Contact" },
     localeLabel: "Language",
-    brandLine: "LuxCanva • Romania, European Union",
-    heroTitle: "White-Label Canvas Printing & Fulfillment Partner in Europe",
+    topLabel: "European canvas production partner",
+    brandLine: "Romania · European Union",
+    heroTitle: "White-Label Canvas Printing & Fulfillment, Designed for Serious Brands",
     heroSubtitle:
-      "LuxCanva is a Romania-based canvas production workshop with capacity for up to 200 pieces per day, offering premium canvas printing up to 170×300 cm, 3D relief printing, premium aluminium frames, white-label fulfillment and print-on-demand services for ecommerce brands, interior designers, photographers and resellers across Europe.",
+      "LuxCanva is a Romania-based B2B canvas production workshop for ecommerce brands, interior designers, photographers and resellers across Europe — with capacity up to 200 pieces per day, production up to 170×300 cm, premium aluminium framing and 3D relief printing.",
     ctaPrimary: "Request B2B Pricing",
     ctaSecondary: "Order Samples",
-    trustBadges: ["Made in EU", "Up to 170×300 cm", "3D Relief Printing", "200 Pieces / Day", "Premium Alu Frames", "White-Label Fulfillment"],
-    heroLabels: ["Workshop production", "Secure packaging", "Interior-ready wall art"],
-    whoTitle: "Built for Businesses That Sell Wall Art",
-    whoIntro:
-      "We help businesses scale their canvas print operations without investing in production equipment, stock, staff or logistics. Whether you run an online store, sell custom wall art, manage interior design projects or need a reliable production partner, LuxCanva can produce and ship canvas prints directly to your customers.",
-    who: [
-      ["Ecommerce Stores", "White-label production and dropshipping for Shopify, WooCommerce, Etsy, Amazon and marketplace sellers."],
-      ["Interior Designers & Architects", "Custom canvas sizes and premium wall art production for homes, hotels, offices, restaurants and commercial spaces."],
-      ["Photographers", "Professional canvas printing for wedding, family, newborn, portrait and corporate photography clients."],
-      ["Hotels, Restaurants & Offices", "Bulk canvas production for hospitality, business interiors, Airbnb apartments and commercial decoration projects."],
-      ["Artists & Creators", "Turn digital art, AI art, photography or illustrations into premium physical canvas products."],
+    trustBadges: ["Made in EU", "Up to 170×300 cm", "200 Pieces / Day", "3D Relief Printing", "Premium Aluminium Frames", "White-Label Fulfillment"],
+    heroStats: [
+      ["170×300 cm", "Ultra-large format production"],
+      ["200/day", "Daily workshop capacity"],
+      ["EU based", "Romania production & fulfillment"],
     ],
-    servicesTitle: "Our B2B Canvas Production Services",
+    servicesTitle: "A Production Setup Built for B2B Growth",
     servicesIntro:
-      "LuxCanva offers a complete production and fulfillment solution for businesses that need reliable canvas printing in Europe.",
+      "We help wall art businesses scale without owning machines, stock or internal production teams.",
     services: [
-      ["White-Label Canvas Fulfillment", "We produce and ship canvas prints under your brand. No LuxCanva branding is included in the package unless requested."],
-      ["Print-on-Demand Production", "Send us orders as they come in. We print, stretch, pack and ship directly to your customer."],
-      ["Bulk Canvas Printing", "Ideal for interior projects, hotel rooms, office decoration, retail collections and large-volume campaigns."],
-      ["Large Format Canvas Printing", "We produce oversized and panoramic canvas prints up to 170 × 300 cm — ideal for premium wall art collections, hotel lobbies and statement interior pieces."],
-      ["Custom Sizes", "Flexible production for standard and custom dimensions, depending on project requirements."],
-      ["Professional Packaging", "Each canvas is carefully packed for safe transport across Europe."],
+      ["White-Label Fulfillment", "We print, stretch, pack and ship under your brand, with no LuxCanva branding inside the package unless requested."],
+      ["Print-on-Demand", "Orders can be sent one by one through a simple workflow, ideal for online stores and marketplace sellers."],
+      ["Large Format & Panoramic", "Oversized canvas production up to 170 × 300 cm for high-impact interior projects and premium collections."],
+      ["3D Relief Printing", "Embossed texture effects that add depth and exclusivity to selected wall art products."],
+      ["Premium Aluminium Frames", "Silver, gold and black aluminium frames for a refined gallery-grade finish."],
+      ["Bulk Production", "Reliable output for hotels, offices, restaurants, decorators and large ecommerce campaigns."],
     ],
-    whyTitle: "Why Partner With LuxCanva?",
-    whyIntro: "Scale with a European production partner that is built for reliability, speed and premium presentation.",
+    whyTitle: "Why LuxCanva Feels Different",
+    whyIntro:
+      "Not a generic print shop. A production partner focused on consistency, presentation and operational clarity.",
     why: [
-      "EU-based production in Romania",
+      "Romania-based EU manufacturing",
       "Up to 200 canvas pieces produced per day",
-      "Ultra-large format printing up to 170 × 300 cm",
-      "3D relief (embossed) printing on canvas",
-      "Premium aluminium frames: silver, gold and black",
-      "White-label shipping available",
-      "Premium cotton canvas material",
-      "Professional UV printing technology",
-      "Panoramic canvas capabilities",
-      "Suitable for POD and bulk orders",
-      "Custom sizes available",
-      "Reliable packaging for courier delivery",
+      "Ultra-large sizes up to 170 × 300 cm",
+      "3D relief and premium finishing options",
+      "Premium aluminium frames in silver, gold and black",
+      "White-label shipping and fulfillment",
       "Direct communication with the production team",
+      "Suitable for POD, reseller and bulk workflows",
     ],
-    whiteLabelEyebrow: "White Label Fulfillment",
-    whiteLabelTitle: "Your Brand. Our Production.",
-    whiteLabelText:
-      "With our white-label fulfillment service, your customers receive the final product as if it came directly from your brand. We handle production, quality control, packaging and shipping while you focus on sales, marketing and customer acquisition.",
-    whiteLabelFeatures: [
-      "No LuxCanva branding in the package",
-      "Optional custom inserts",
-      "Optional branded packaging solutions",
-      "Direct shipping to end customers",
-      "Suitable for ecommerce and marketplace sellers",
-      "Simple order workflow via email, CSV or manual order submission",
+    premiumTitle: "Premium Workshop Strengths",
+    premiumIntro: "These are the production details that make LuxCanva attractive for premium European B2B clients.",
+    premium: [
+      "Large format printing up to 170 × 300 cm",
+      "Panoramic wall art production",
+      "Professional UV print quality",
+      "3D relief embossed finish",
+      "Premium aluminium framing options",
+      "Secure courier-ready packaging",
+      "White-label presentation",
+      "Capacity up to 200 pieces/day",
     ],
-    whiteLabelCta: "Become a White-Label Partner",
-    sampleEyebrow: "Sample Kit",
-    sampleTitle: "Request a Sample Kit",
-    sampleText:
-      "Before starting a partnership, we recommend ordering samples to evaluate our canvas material, print quality, finishing and packaging.",
-    capabilitiesTitle: "Canvas Products We Can Produce",
-    capabilitiesIntro: "We produce premium canvas wall art for both small and large-scale B2B needs.",
-    capabilities: [
-      "Standard canvas prints",
-      "Large format canvas prints",
-      "Panoramic canvas prints",
-      "Personalized photo canvas",
-      "Wall art sets",
-      "Interior decoration canvas",
-      "Hotel and office canvas decor",
-      "Custom size canvas projects",
-      "Premium UV printed canvas",
-      "3D relief printing effect on canvas",
-      "Premium aluminium frames: silver, gold and black",
-      "Ultra-large formats up to 170 × 300 cm",
+    workflowTitle: "How We Work Together",
+    workflow: [
+      ["01", "Tell us what you sell", "Share your business model, product range and estimated monthly volume."],
+      ["02", "Get B2B pricing", "We quote based on size range, finishing options and expected production needs."],
+      ["03", "Order samples", "You test print quality, material, framing, packaging and final presentation."],
+      ["04", "Send live orders", "We receive orders manually, by spreadsheet or through a simple agreed workflow."],
+      ["05", "We produce & ship", "Your orders are produced, checked, packed and shipped to you or your end customer."],
     ],
-    workflowTitle: "How It Works",
-    workflowIntro: "A simple workflow built for B2B partnerships.",
-    workflow: ["Contact Us", "Receive B2B Pricing", "Order Samples", "Send Orders", "We Produce & Ship"],
-    qualityTitle: "Premium Canvas Quality",
-    qualityIntro:
-      "We focus on producing canvas prints that look professional, feel premium and are suitable for both ecommerce customers and high-end interior spaces.",
-    quality: [
-      "Premium canvas material",
-      "Sharp print detail",
-      "Rich color reproduction",
-      "Durable structure",
-      "Carefully stretched canvas",
-      "3D relief (embossed) finish available",
-      "Premium aluminium framing: silver, gold, black",
-      "Professional finishing",
-      "Quality control before dispatch",
-      "Secure protective packaging",
-    ],
-    b2bEyebrow: "B2B Benefits",
-    b2bTitle: "Scale Your Canvas Business Without Owning Production",
-    b2bText:
-      "Working with LuxCanva allows you to grow faster without investing in expensive printing equipment, production space, stock, staff or packaging operations.",
-    b2b: [
-      "Lower operational complexity",
-      "No need to hold inventory",
-      "Production capacity up to 200 pieces/day",
-      "Faster product testing",
-      "Easy expansion into new canvas sizes — up to 170×300 cm",
-      "Flexible order volume",
-      "Better control over European fulfillment",
-      "Direct access to production support",
-    ],
-    contactEyebrow: "Contact",
-    contactTitle: "Let’s Build Your Canvas Production Workflow",
+    contactTitle: "Build a Better Canvas Supply Chain",
     contactText:
-      "Looking for a reliable European canvas print partner? Contact LuxCanva and tell us what you need. We will send you B2B pricing, sample options and production details.",
-    contactAlt: "Contact Our Production Team",
+      "If you need a reliable European production partner for white-label canvas printing, let’s talk. We’ll send pricing, sample options and next-step details.",
+    contactAlt: "Talk to Production Team",
     quoteCta: "Get a Quote",
     formFields: ["Name", "Company", "Email", "Phone", "Website", "Country", "Monthly order estimate"],
     message: "Message",
@@ -134,122 +72,67 @@ const content = {
   ro: {
     nav: { home: "Acasă", about: "Despre", services: "Servicii", faq: "Întrebări", contact: "Contact" },
     localeLabel: "Limbă",
-    brandLine: "LuxCanva • România, Uniunea Europeană",
-    heroTitle: "Partener european pentru print canvas white-label și fulfillment",
+    topLabel: "Partener european de producție canvas",
+    brandLine: "România · Uniunea Europeană",
+    heroTitle: "Print Canvas White-Label & Fulfillment pentru Branduri Serioase",
     heroSubtitle:
-      "LuxCanva este un atelier de producție canvas din România cu o capacitate de până la 200 tablouri pe zi, print canvas până la 170×300 cm, print în relief 3D, rame aluminiu premium, fulfillment white-label și servicii print-on-demand pentru branduri ecommerce, designeri de interior, fotografi și reselleri din Europa.",
+      "LuxCanva este un atelier B2B de producție canvas din România pentru branduri ecommerce, designeri de interior, fotografi și reselleri din Europa — cu o capacitate de până la 200 tablouri pe zi, producție până la 170×300 cm, rame aluminiu premium și print în relief 3D.",
     ctaPrimary: "Solicită prețuri B2B",
     ctaSecondary: "Comandă mostre",
-    trustBadges: ["Produs în UE", "Până la 170×300 cm", "Print Relief 3D", "200 Tablouri / Zi", "Rame Aluminiu Premium", "Fulfillment White-Label"],
-    heroLabels: ["Producție în atelier", "Ambalare sigură", "Wall art pregătit pentru interior"],
-    whoTitle: "Construit pentru companii care vând wall art",
-    whoIntro:
-      "Ajutăm companiile să își scaleze operațiunile de print canvas fără investiții în echipamente, stoc, personal sau logistică. Fie că ai un magazin online, vinzi artă decorativă personalizată, gestionezi proiecte de design interior sau ai nevoie de un partener de producție de încredere, LuxCanva poate produce și expedia tablourile canvas direct către clienții tăi.",
-    who: [
-      ["Magazine Ecommerce", "Producție white-label și dropshipping pentru Shopify, WooCommerce, Etsy, Amazon și selleri din marketplace-uri."],
-      ["Designeri de Interior & Arhitecți", "Dimensiuni custom și producție premium de wall art pentru locuințe, hoteluri, birouri, restaurante și spații comerciale."],
-      ["Fotografi", "Print profesional pe canvas pentru clienți de wedding, family, newborn, portret și corporate."],
-      ["Hoteluri, Restaurante & Birouri", "Producție bulk de canvas pentru HoReCa, spații business, apartamente Airbnb și proiecte comerciale de decor."],
-      ["Artiști & Creatori", "Transformă arta digitală, AI art, fotografia sau ilustrațiile în produse canvas premium fizice."],
+    trustBadges: ["Produs în UE", "Până la 170×300 cm", "200 Tablouri / Zi", "Print Relief 3D", "Rame Aluminiu Premium", "Fulfillment White-Label"],
+    heroStats: [
+      ["170×300 cm", "Producție ultra-large format"],
+      ["200/zi", "Capacitate zilnică în atelier"],
+      ["Bază în UE", "Producție și fulfillment din România"],
     ],
-    servicesTitle: "Serviciile noastre B2B de producție canvas",
+    servicesTitle: "O infrastructură de producție pentru creștere B2B",
     servicesIntro:
-      "LuxCanva oferă o soluție completă de producție și fulfillment pentru companiile care au nevoie de print canvas fiabil în Europa.",
+      "Ajutăm businessurile de wall art să scaleze fără să dețină utilaje, stoc sau echipe interne de producție.",
     services: [
-      ["Fulfillment Canvas White-Label", "Producem și expediem tablouri canvas sub brandul tău. Pachetul nu include branding LuxCanva decât dacă este solicitat."],
-      ["Producție Print-on-Demand", "Ne trimiți comenzile pe măsură ce apar. Noi printăm, întindem pe șasiu, ambalăm și expediem direct către clientul tău."],
-      ["Print Canvas Bulk", "Ideal pentru proiecte de interior, camere de hotel, decor office, colecții retail și campanii cu volum mare."],
-      ["Print Canvas Large Format", "Producem canvas-uri oversized și panoramice până la 170 × 300 cm — ideale pentru colecții premium de wall art, lobby-uri de hotel și piese statement de interior."],
-      ["Dimensiuni Custom", "Producție flexibilă pentru dimensiuni standard și personalizate, în funcție de cerințele proiectului."],
-      ["Ambalare Profesională", "Fiecare canvas este ambalat atent pentru transport sigur în toată Europa."],
+      ["Fulfillment White-Label", "Printăm, întindem, ambalăm și livrăm sub brandul tău, fără branding LuxCanva în pachet dacă nu este cerut."],
+      ["Print-on-Demand", "Comenzile pot fi trimise individual printr-un workflow simplu, ideal pentru magazine online și marketplace sellers."],
+      ["Large Format & Panoramic", "Producție oversized până la 170 × 300 cm pentru proiecte interioare de impact și colecții premium."],
+      ["Print în Relief 3D", "Efecte embossed care adaugă profunzime și exclusivitate anumitor produse de wall art."],
+      ["Rame Aluminiu Premium", "Rame aluminiu argintii, aurii și negre pentru un finisaj rafinat, de galerie."],
+      ["Producție Bulk", "Output fiabil pentru hoteluri, birouri, restaurante, decoratori și campanii ecommerce mari."],
     ],
-    whyTitle: "De ce să colaborezi cu LuxCanva?",
-    whyIntro: "Scalează cu un partener european de producție construit pentru fiabilitate, viteză și prezentare premium.",
+    whyTitle: "De ce LuxCanva se simte diferit",
+    whyIntro:
+      "Nu un print shop generic. Un partener de producție axat pe consistență, prezentare și claritate operațională.",
     why: [
-      "Producție în UE, în România",
+      "Producție în România, în UE",
       "Până la 200 tablouri canvas produse pe zi",
-      "Print large format până la 170 × 300 cm",
-      "Print în relief 3D (efect embossed) pe canvas",
-      "Rame aluminiu premium: argintiu, auriu și negru",
-      "Expediere white-label disponibilă",
-      "Material canvas premium din bumbac",
-      "Tehnologie profesională de print UV",
-      "Capabilități panoramice și oversized",
-      "Potrivit pentru POD și comenzi bulk",
-      "Dimensiuni custom disponibile",
-      "Ambalare sigură pentru livrare prin curier",
+      "Dimensiuni ultra-mari până la 170 × 300 cm",
+      "Print în relief 3D și finisaje premium",
+      "Rame aluminiu premium în argintiu, auriu și negru",
+      "Livrare și fulfillment white-label",
       "Comunicare directă cu echipa de producție",
+      "Potrivit pentru POD, reselleri și bulk orders",
     ],
-    whiteLabelEyebrow: "Fulfillment White-Label",
-    whiteLabelTitle: "Brandul tău. Producția noastră.",
-    whiteLabelText:
-      "Prin serviciul nostru de fulfillment white-label, clienții tăi primesc produsul final ca și cum ar veni direct de la brandul tău. Noi gestionăm producția, controlul calității, ambalarea și expedierea, iar tu te concentrezi pe vânzări, marketing și achiziție de clienți.",
-    whiteLabelFeatures: [
-      "Fără branding LuxCanva în pachet",
-      "Inserturi personalizate opționale",
-      "Soluții de ambalare branduite opționale",
-      "Expediere directă către clientul final",
-      "Potrivit pentru ecommerce și selleri din marketplace-uri",
-      "Flux simplu de comenzi prin email, CSV sau trimitere manuală",
+    premiumTitle: "Punctele premium ale atelierului",
+    premiumIntro: "Aceste detalii de producție fac LuxCanva atractiv pentru clienți B2B premium din Europa.",
+    premium: [
+      "Print large format până la 170 × 300 cm",
+      "Producție panoramică pentru wall art",
+      "Calitate profesională UV",
+      "Finisaj embossed în relief 3D",
+      "Opțiuni premium de rame aluminiu",
+      "Ambalare sigură pentru curier",
+      "Prezentare white-label",
+      "Capacitate până la 200 tablouri/zi",
     ],
-    whiteLabelCta: "Devino partener White-Label",
-    sampleEyebrow: "Kit de mostre",
-    sampleTitle: "Solicită un kit de mostre",
-    sampleText:
-      "Înainte de a începe parteneriatul, recomandăm comandarea de mostre pentru a evalua materialul canvas, calitatea printului, finisajele și ambalarea.",
-    capabilitiesTitle: "Produse canvas pe care le putem realiza",
-    capabilitiesIntro: "Producem wall art premium pe canvas atât pentru nevoi B2B mici, cât și mari.",
-    capabilities: [
-      "Printuri canvas standard",
-      "Printuri canvas large format",
-      "Printuri canvas panoramice",
-      "Canvas foto personalizat",
-      "Seturi wall art",
-      "Canvas pentru decor interior",
-      "Decor canvas pentru hoteluri și birouri",
-      "Proiecte canvas pe dimensiuni custom",
-      "Canvas premium printat UV",
-      "Print canvas în relief 3D",
-      "Rame aluminiu premium: argintiu, auriu și negru",
-      "Formate ultra-mari până la 170 × 300 cm",
+    workflowTitle: "Cum lucrăm împreună",
+    workflow: [
+      ["01", "Spune-ne ce vinzi", "Trimite-ne modelul businessului, gama de produse și volumul estimat lunar."],
+      ["02", "Primești prețuri B2B", "Cotăm în funcție de dimensiuni, finisaje și nevoile reale de producție."],
+      ["03", "Comanzi mostre", "Testezi calitatea printului, materialul, ramele, ambalarea și prezentarea finală."],
+      ["04", "Trimiți comenzile live", "Primim comenzile manual, prin spreadsheet sau printr-un workflow simplu agreat."],
+      ["05", "Noi producem și livrăm", "Comenzile sunt produse, verificate, ambalate și trimise către tine sau clientul final."],
     ],
-    workflowTitle: "Cum funcționează",
-    workflowIntro: "Un flux simplu construit pentru parteneriate B2B.",
-    workflow: ["Ne contactezi", "Primești prețuri B2B", "Comanzi mostre", "Trimiți comenzile", "Noi producem și livrăm"],
-    qualityTitle: "Calitate premium pentru canvas",
-    qualityIntro:
-      "Ne concentrăm pe producția unor canvas-uri care arată profesionist, se simt premium și sunt potrivite atât pentru clienți ecommerce, cât și pentru spații interioare high-end.",
-    quality: [
-      "Material canvas premium",
-      "Detaliu clar al printului",
-      "Reproducere bogată a culorilor",
-      "Structură durabilă",
-      "Canvas întins cu grijă",
-      "Finisaj în relief 3D disponibil",
-      "Rame aluminiu premium: argintiu, auriu, negru",
-      "Finisare profesională",
-      "Controlul calității înainte de expediere",
-      "Ambalare protectivă sigură",
-    ],
-    b2bEyebrow: "Beneficii B2B",
-    b2bTitle: "Scalează businessul tău de canvas fără să deții producția",
-    b2bText:
-      "Lucrând cu LuxCanva poți crește mai rapid fără investiții în echipamente scumpe de print, spațiu de producție, stoc, personal sau operațiuni de ambalare.",
-    b2b: [
-      "Complexitate operațională mai mică",
-      "Fără nevoie de stoc",
-      "Capacitate de producție până la 200 tablouri/zi",
-      "Testare mai rapidă a produselor",
-      "Extindere ușoară către dimensiuni noi — până la 170×300 cm",
-      "Volum flexibil de comenzi",
-      "Control mai bun asupra fulfillmentului european",
-      "Acces direct la suportul de producție",
-    ],
-    contactEyebrow: "Contact",
-    contactTitle: "Hai să construim fluxul tău de producție canvas",
+    contactTitle: "Construiește un supply chain mai bun pentru canvas",
     contactText:
-      "Cauți un partener european de încredere pentru print canvas? Contactează LuxCanva și spune-ne de ce ai nevoie. Îți trimitem prețurile B2B, opțiunile de mostre și detaliile de producție.",
-    contactAlt: "Contactează echipa de producție",
+      "Dacă ai nevoie de un partener european de încredere pentru print canvas white-label, hai să vorbim. Îți trimitem prețuri, opțiuni de mostre și pașii următori.",
+    contactAlt: "Vorbește cu echipa de producție",
     quoteCta: "Cere ofertă",
     formFields: ["Nume", "Companie", "Email", "Telefon", "Website", "Țară", "Estimare comenzi lunare"],
     message: "Mesaj",
@@ -266,194 +149,183 @@ export default async function Home({
   const t = content[lang];
 
   return (
-    <main className="bg-[#faf8f5] text-stone-950">
-      <header className="sticky top-0 z-30 border-b border-white/40 bg-white/70 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-10">
+    <main className="relative z-[1]">
+      <header className="sticky top-0 z-30 border-b border-white/30 bg-white/70 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
           <div className="flex items-center gap-4">
             <div className="grid h-12 w-12 place-items-center rounded-2xl bg-stone-950 text-sm font-semibold text-white shadow-lg">LC</div>
             <div>
-                      <div className="text-lg font-semibold tracking-tight">LuxCanva</div>
-            <div className="text-[11px] uppercase tracking-[0.28em] text-stone-500">B2B Canvas Production</div>
+              <div className="text-lg font-semibold tracking-tight">LuxCanva</div>
+              <div className="text-[11px] uppercase tracking-[0.28em] text-stone-500">B2B Canvas Production</div>
+            </div>
           </div>
-          </div>
-          <nav className="hidden gap-6 text-sm text-stone-700 md:flex">
+          <nav className="hidden items-center gap-6 text-sm text-stone-700 md:flex">
             <Link href={`/?lang=${lang}`}>{t.nav.home}</Link>
             <Link href={`/about?lang=${lang}`}>{t.nav.about}</Link>
             <Link href={`/services?lang=${lang}`}>{t.nav.services}</Link>
             <Link href={`/faq?lang=${lang}`}>{t.nav.faq}</Link>
             <Link href={`/contact?lang=${lang}`}>{t.nav.contact}</Link>
+            <Link href={`/contact?lang=${lang}`} className="rounded-full bg-stone-950 px-5 py-2.5 text-white">{t.ctaPrimary}</Link>
           </nav>
-          <div className="flex items-center gap-2 rounded-full border border-stone-900/10 bg-white p-1 text-sm">
-            <span className="px-2 text-stone-500">{t.localeLabel}</span>
-            <Link href="/?lang=en" className={`rounded-full px-3 py-1 ${lang === "en" ? "bg-stone-950 text-white" : "text-stone-700"}`}>EN</Link>
-            <Link href="/?lang=ro" className={`rounded-full px-3 py-1 ${lang === "ro" ? "bg-stone-950 text-white" : "text-stone-700"}`}>RO</Link>
-          </div>
         </div>
       </header>
 
-      <section className="relative overflow-hidden border-b border-black/10 bg-[radial-gradient(circle_at_top_right,rgba(201,169,110,0.18),transparent_35%),linear-gradient(180deg,#fbf7f1_0%,#f6efe4_100%)]">
-        <div className="mx-auto grid min-h-[88vh] max-w-7xl gap-12 px-6 py-14 lg:grid-cols-[1.05fr_.95fr] lg:px-10 lg:py-20">
-          <div className="flex flex-col justify-center">
-            <p className="mb-5 text-sm font-medium uppercase tracking-[0.28em] text-stone-600">{t.brandLine}</p>
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-900/10 bg-white px-4 py-2 text-xs uppercase tracking-[0.24em] text-stone-600 shadow-sm">European production partner</div>
-            <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-tight text-balance sm:text-6xl lg:text-7xl">{t.heroTitle}</h1>
+      <section className="px-6 pb-10 pt-8 lg:px-10 lg:pb-16 lg:pt-10">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_.95fr]">
+          <div className="card-premium rounded-[2rem] p-8 sm:p-10 lg:p-14">
+            <div className="label-premium inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-stone-600">
+              {t.topLabel}
+            </div>
+            <p className="mt-6 text-sm uppercase tracking-[0.28em] text-stone-500">{t.brandLine}</p>
+            <h1 className="font-display mt-4 max-w-4xl text-5xl leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl">
+              {t.heroTitle}
+            </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-700">{t.heroSubtitle}</p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a className="rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white" href="#contact">{t.ctaPrimary}</a>
-              <a className="rounded-full border border-stone-900/20 bg-white px-6 py-3 text-sm font-medium text-stone-950" href="#samples">{t.ctaSecondary}</a>
+              <a className="rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white shadow-lg" href="#contact">{t.ctaPrimary}</a>
+              <a className="rounded-full border border-stone-900/10 bg-white px-6 py-3 text-sm font-medium text-stone-900 shadow-sm" href="#contact">{t.ctaSecondary}</a>
             </div>
-            <div className="mt-8 flex flex-wrap gap-3 text-sm text-stone-700">
-              <span className="rounded-full bg-stone-950 px-4 py-2 text-white">Made in EU</span>
-              <span className="rounded-full bg-white px-4 py-2 shadow-sm">Fast turnaround</span>
-              {t.trustBadges.map((badge) => <span key={badge} className="rounded-full border border-stone-900/10 bg-white px-4 py-2">{badge}</span>)}
+            <div className="mt-8 flex flex-wrap gap-3">
+              {t.trustBadges.map((badge) => (
+                <span key={badge} className="label-premium rounded-full px-4 py-2 text-xs uppercase tracking-[0.18em] text-stone-700">
+                  {badge}
+                </span>
+              ))}
             </div>
           </div>
-          <div className="grid gap-4 self-center">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="overflow-hidden rounded-[2rem] border border-white/60 bg-white shadow-xl">
-                <div className="aspect-[4/5] bg-cover bg-center" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.08)), url(${images.hero})` }} />
+
+          <div className="grid gap-6">
+            <div className="grid gap-6 md:grid-cols-[1.1fr_.9fr]">
+              <div className="overflow-hidden rounded-[2rem] border border-white/50 shadow-[0_30px_80px_rgba(20,20,20,0.12)]">
+                <div className="aspect-[4/5] bg-[linear-gradient(rgba(15,15,16,.18),rgba(15,15,16,.18)),url(https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80)] bg-cover bg-center" />
               </div>
-              <div className="grid gap-4">
-                <div className="overflow-hidden rounded-[2rem] border border-white/60 bg-white shadow-xl">
-                  <div className="aspect-[4/3] bg-cover bg-center" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.08)), url(${images.packaging})` }} />
+              <div className="grid gap-6">
+                <div className="overflow-hidden rounded-[2rem] border border-white/50 shadow-[0_30px_80px_rgba(20,20,20,0.12)]">
+                  <div className="aspect-[4/3] bg-[linear-gradient(rgba(15,15,16,.12),rgba(15,15,16,.12)),url(https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=1200&q=80)] bg-cover bg-center" />
                 </div>
-                <div className="rounded-[2rem] border border-stone-900/10 bg-white p-5 shadow-lg">
-                  <p className="text-xs uppercase tracking-[0.24em] text-stone-500">Production capacity</p>
-                  <p className="mt-2 text-3xl font-semibold">200 / day</p>
-                  <p className="mt-2 text-sm text-stone-600">Large format up to 170 × 300 cm</p>
+                <div className="card-premium rounded-[2rem] p-6">
+                  <p className="text-xs uppercase tracking-[0.26em] text-stone-500">Workshop Notes</p>
+                  <div className="mt-4 space-y-4">
+                    {t.heroStats.map(([value, label]) => (
+                      <div key={value} className="border-b border-stone-900/8 pb-4 last:border-b-0 last:pb-0">
+                        <div className="font-display text-3xl">{value}</div>
+                        <div className="mt-1 text-sm text-stone-600">{label}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-            {t.heroLabels.map((label, i) => (
-              <div key={label} className={`min-h-44 rounded-3xl border border-white/60 bg-cover bg-center shadow-lg ${i === 0 ? 'bg-[linear-gradient(rgba(20,20,20,.20),rgba(20,20,20,.20)),url(https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1200&q=80)]' : i === 1 ? 'bg-[linear-gradient(rgba(20,20,20,.18),rgba(20,20,20,.18)),url(https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80)]' : 'bg-[linear-gradient(rgba(20,20,20,.18),rgba(20,20,20,.18)),url(https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80)]'}`}>
-                <div className="flex h-full items-end p-6 text-white">
-                  <div className="rounded-2xl bg-black/35 px-4 py-2 text-sm backdrop-blur-sm">{label}</div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {[
+                "https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1200&q=80",
+                "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+                "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+              ].map((url, i) => (
+                <div key={url} className="overflow-hidden rounded-[1.6rem] border border-white/50 shadow-[0_24px_60px_rgba(20,20,20,0.08)]">
+                  <div className={`aspect-[5/4] bg-cover bg-center ${i === 0 ? "" : ""}`} style={{ backgroundImage: `linear-gradient(rgba(15,15,16,.14),rgba(15,15,16,.14)), url(${url})` }} />
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <Section title={t.whoTitle} intro={t.whoIntro}>
-        <Grid items={t.who.map(([title, text]) => ({ title, text }))} />
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          <div className="overflow-hidden rounded-[2rem] border border-stone-900/10 bg-white shadow-lg">
-            <div className="aspect-[4/3] bg-cover bg-center" style={{ backgroundImage: `url(${images.atelier})` }} />
-            <div className="p-5"><p className="text-xs uppercase tracking-[0.24em] text-stone-500">Atelier</p><p className="mt-2 font-medium">Professional workshop</p></div>
-          </div>
-          <div className="overflow-hidden rounded-[2rem] border border-stone-900/10 bg-white shadow-lg">
-            <div className="aspect-[4/3] bg-cover bg-center" style={{ backgroundImage: `url(${images.packaging})` }} />
-            <div className="p-5"><p className="text-xs uppercase tracking-[0.24em] text-stone-500">Packaging</p><p className="mt-2 font-medium">Safe courier-ready packing</p></div>
-          </div>
-          <div className="overflow-hidden rounded-[2rem] border border-stone-900/10 bg-white shadow-lg">
-            <div className="aspect-[4/3] bg-cover bg-center" style={{ backgroundImage: `url(${images.interiors})` }} />
-            <div className="p-5"><p className="text-xs uppercase tracking-[0.24em] text-stone-500">Interior use</p><p className="mt-2 font-medium">Designed for premium spaces</p></div>
-          </div>
-        </div>
-      </Section>
-
-      <Section title={t.servicesTitle} intro={t.servicesIntro}>
-        <Grid items={t.services.map(([title, text]) => ({ title, text }))} />
+      <Section title={t.servicesTitle} intro={t.servicesIntro} dark>
+        <Grid items={t.services.map(([title, text]) => ({ title, text }))} dark />
       </Section>
 
       <Section title={t.whyTitle} intro={t.whyIntro}>
-        <ul className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {t.why.map((item) => <li key={item} className="rounded-3xl border border-stone-900/10 bg-white p-5 text-stone-800">{item}</li>)}
-        </ul>
-      </Section>
-
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-2 lg:px-10">
-        <div className="rounded-[2rem] border border-stone-900/10 bg-white p-8">
-          <p className="text-sm uppercase tracking-[0.28em] text-stone-500">{t.whiteLabelEyebrow}</p>
-          <h2 className="mt-4 text-3xl font-semibold">{t.whiteLabelTitle}</h2>
-          <p className="mt-4 text-stone-700">{t.whiteLabelText}</p>
-          <ul className="mt-6 grid gap-3 text-stone-700">
-            {t.whiteLabelFeatures.map((x) => <li key={x}>• {x}</li>)}
-          </ul>
-          <a className="mt-8 inline-flex rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white" href="#contact">{t.whiteLabelCta}</a>
-        </div>
-        <div id="samples" className="rounded-[2rem] border border-stone-900/10 bg-[#efe3d3] p-8">
-          <p className="text-sm uppercase tracking-[0.28em] text-stone-600">{t.sampleEyebrow}</p>
-          <h2 className="mt-4 text-3xl font-semibold">{t.sampleTitle}</h2>
-          <p className="mt-4 text-stone-700">{t.sampleText}</p>
-          <a className="mt-8 inline-flex rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white" href="#contact">{t.ctaSecondary}</a>
-        </div>
-      </section>
-
-      <Section title={t.capabilitiesTitle} intro={t.capabilitiesIntro}>
-        <ul className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {t.capabilities.map((item) => <li key={item} className="rounded-2xl border border-stone-900/10 bg-white p-4">{item}</li>)}
-        </ul>
-      </Section>
-
-      <Section title={t.workflowTitle} intro={t.workflowIntro}>
-        <div className="grid gap-4 md:grid-cols-5">
-          {t.workflow.map((step, idx) => (
-            <div key={step} className="rounded-3xl border border-stone-900/10 bg-white p-5">
-              <p className="text-sm text-stone-500">Step {idx + 1}</p>
-              <h3 className="mt-2 font-medium">{step}</h3>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {t.why.map((item) => (
+            <div key={item} className="card-premium rounded-[1.75rem] p-5 text-stone-800">
+              <div className="mb-4 h-px w-12 bg-[var(--gold)]" />
+              <p className="text-sm leading-7">{item}</p>
             </div>
           ))}
         </div>
       </Section>
 
-      <Section title={t.qualityTitle} intro={t.qualityIntro}>
-        <Grid items={t.quality.map((title) => ({ title }))} compact />
-      </Section>
-
-      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <div className="rounded-[2rem] border border-stone-900/10 bg-stone-950 px-8 py-12 text-white">
-          <p className="text-sm uppercase tracking-[0.28em] text-stone-300">{t.b2bEyebrow}</p>
-          <h2 className="mt-4 max-w-2xl text-3xl font-semibold">{t.b2bTitle}</h2>
-          <p className="mt-4 max-w-3xl text-stone-300">{t.b2bText}</p>
-          <div className="mt-8 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-            {t.b2b.map((x) => <div key={x} className="rounded-2xl border border-white/10 bg-white/5 p-4">{x}</div>)}
+      <Section title={t.premiumTitle} intro={t.premiumIntro}>
+        <div className="grid gap-6 lg:grid-cols-[.9fr_1.1fr]">
+          <div className="overflow-hidden rounded-[2rem] border border-white/50 shadow-[0_30px_80px_rgba(20,20,20,0.12)]">
+            <div className="aspect-[4/5] bg-[linear-gradient(rgba(15,15,16,.16),rgba(15,15,16,.16)),url(https://images.unsplash.com/photo-1490127252417-7c393f993ee4?auto=format&fit=crop&w=1400&q=80)] bg-cover bg-center" />
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {t.premium.map((item) => (
+              <div key={item} className="card-premium rounded-[1.75rem] p-6">
+                <div className="label-premium mb-4 inline-flex rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-stone-500">Premium</div>
+                <p className="text-base leading-7 text-stone-800">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section id="contact" className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <div className="grid gap-6 rounded-[2rem] border border-stone-900/10 bg-white p-8 lg:grid-cols-[1fr_.9fr]">
-          <div>
-            <p className="text-sm uppercase tracking-[0.28em] text-stone-500">{t.contactEyebrow}</p>
-            <h2 className="mt-4 text-3xl font-semibold">{t.contactTitle}</h2>
-            <p className="mt-4 text-stone-700">{t.contactText}</p>
+      <Section title={t.workflowTitle} intro="" dark>
+        <div className="grid gap-4 lg:grid-cols-5">
+          {t.workflow.map(([nr, title, text]) => (
+            <div key={nr} className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 text-white backdrop-blur-sm">
+              <div className="font-display text-4xl text-[var(--gold-soft)]">{nr}</div>
+              <h3 className="mt-4 text-lg font-semibold">{title}</h3>
+              <p className="mt-3 text-sm leading-7 text-stone-300">{text}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <section id="contact" className="px-6 py-16 lg:px-10 lg:py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_.9fr]">
+          <div className="card-premium rounded-[2rem] p-8 sm:p-10 lg:p-12">
+            <div className="label-premium inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-stone-600">Contact</div>
+            <h2 className="font-display mt-6 text-4xl leading-tight sm:text-5xl">{t.contactTitle}</h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-700">{t.contactText}</p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a className="rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white" href="mailto:hello@luxcanva.ro">{t.ctaPrimary}</a>
-              <a className="rounded-full border border-stone-900/10 px-6 py-3 text-sm font-medium" href="mailto:hello@luxcanva.ro">{t.contactAlt}</a>
+              <a className="rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white shadow-lg" href="mailto:horia.petrutiu@kidgps.ro">{t.ctaPrimary}</a>
+              <a className="rounded-full border border-stone-900/10 bg-white px-6 py-3 text-sm font-medium text-stone-900" href="mailto:horia.petrutiu@kidgps.ro">{t.contactAlt}</a>
             </div>
           </div>
-          <form className="grid gap-3 rounded-[1.5rem] bg-[#f7f2ea] p-5">
-            {t.formFields.map((f) => <input key={f} placeholder={f} className="rounded-2xl border border-stone-900/10 bg-white px-4 py-3 outline-none" />)}
-            <textarea placeholder={t.message} rows={5} className="rounded-2xl border border-stone-900/10 bg-white px-4 py-3 outline-none" />
-            <button className="rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white">{t.quoteCta}</button>
-          </form>
+
+          <div className="card-premium rounded-[2rem] p-6 sm:p-8">
+            <form className="grid gap-3">
+              {t.formFields.map((f) => (
+                <input key={f} placeholder={f} className="rounded-[1.2rem] border border-stone-900/10 bg-white/85 px-4 py-3.5 text-sm outline-none" />
+              ))}
+              <textarea placeholder={t.message} rows={6} className="rounded-[1.2rem] border border-stone-900/10 bg-white/85 px-4 py-3.5 text-sm outline-none" />
+              <button className="mt-2 rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white shadow-lg">{t.quoteCta}</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
   );
 }
 
-function Section({ title, intro, children }: { title: string; intro: string; children: React.ReactNode }) {
+function Section({ title, intro, children, dark = false }: { title: string; intro: string; children: React.ReactNode; dark?: boolean }) {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-      <div className="mb-8 max-w-3xl">
-        <h2 className="text-3xl font-semibold tracking-tight text-balance">{title}</h2>
-        <p className="mt-3 text-stone-700">{intro}</p>
+    <section className={`px-6 py-16 lg:px-10 lg:py-20 ${dark ? "bg-stone-950 text-white" : ""}`}>
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-10 max-w-3xl">
+          <div className={`${dark ? "bg-white/10 text-stone-300" : "label-premium text-stone-600"} inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em]`}>
+            LuxCanva
+          </div>
+          <h2 className="font-display mt-6 text-4xl leading-tight tracking-tight sm:text-5xl">{title}</h2>
+          {intro ? <p className={`mt-4 text-lg leading-8 ${dark ? "text-stone-300" : "text-stone-700"}`}>{intro}</p> : null}
+        </div>
+        {children}
       </div>
-      {children}
     </section>
   );
 }
 
-function Grid({ items }: { items: { title: string; text?: string }[]; compact?: boolean }) {
+function Grid({ items, dark = false }: { items: { title: string; text?: string }[]; dark?: boolean }) {
   return (
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {items.map((item) => (
-        <article key={item.title} className="rounded-3xl border border-stone-900/10 bg-white p-6">
-          <h3 className="text-lg font-medium">{item.title}</h3>
-          {item.text ? <p className="mt-3 text-stone-700">{item.text}</p> : null}
+        <article key={item.title} className={`${dark ? "border-white/10 bg-white/5 text-white" : "card-premium text-stone-900"} rounded-[1.75rem] border p-6`}>
+          <div className={`${dark ? "bg-[var(--gold-soft)]" : "bg-[var(--gold)]"} mb-5 h-px w-12`} />
+          <h3 className="text-xl font-semibold leading-snug">{item.title}</h3>
+          {item.text ? <p className={`${dark ? "text-stone-300" : "text-stone-700"} mt-4 text-sm leading-7`}>{item.text}</p> : null}
         </article>
       ))}
     </div>
