@@ -259,23 +259,20 @@ export default async function Home({
           <div className="overflow-hidden rounded-xl border border-white/50 shadow-[0_30px_80px_rgba(20,20,20,0.12)]">
             <div className="aspect-[4/5] bg-[linear-gradient(rgba(15,15,16,.16),rgba(15,15,16,.16)),url(https://images.unsplash.com/photo-1490127252417-7c393f993ee4?auto=format&fit=crop&w=1400&q=80)] bg-cover bg-center" />
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2">
             {t.premium.map((item) => (
-              <div key={item} className="card-premium rounded-xl p-5 flex gap-4 items-start">
+              <div key={item} className="card-premium rounded-xl px-4 py-3 flex gap-3 items-center">
                 <span style={{
                   background: "linear-gradient(135deg, #b9935a 0%, #d9bc8f 100%)",
                   color: "#fff",
-                  borderRadius: "0.5rem",
-                  padding: "0.35rem 0.7rem",
-                  fontSize: "0.65rem",
+                  borderRadius: "0.4rem",
+                  padding: "0.25rem 0.5rem",
+                  fontSize: "0.7rem",
                   fontWeight: 700,
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
                   flexShrink: 0,
                   boxShadow: "0 2px 8px rgba(185,147,90,0.35)",
-                  marginTop: "0.15rem",
                 }}>★</span>
-                <p className="text-base font-medium leading-7 text-stone-800">{item}</p>
+                <p className="text-sm font-medium leading-6 text-stone-800">{item}</p>
               </div>
             ))}
           </div>
