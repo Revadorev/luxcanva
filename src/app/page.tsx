@@ -1,5 +1,12 @@
 import Link from "next/link";
 
+const images = {
+  hero: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80",
+  atelier: "https://images.unsplash.com/photo-1490127252417-7c393f993ee4?auto=format&fit=crop&w=1200&q=80",
+  packaging: "https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=1200&q=80",
+  interiors: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+};
+
 const content = {
   en: {
     nav: { home: "Home", about: "About", services: "Services", faq: "FAQ", contact: "Contact" },
@@ -259,12 +266,15 @@ export default async function Home({
   const t = content[lang];
 
   return (
-    <main className="bg-[#f7f2ea] text-stone-950">
-      <header className="sticky top-0 z-20 border-b border-stone-900/10 bg-[#fbf7f1]/90 backdrop-blur">
+    <main className="bg-[#faf8f5] text-stone-950">
+      <header className="sticky top-0 z-30 border-b border-white/40 bg-white/70 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-10">
-          <div>
-            <div className="text-lg font-semibold tracking-tight">LuxCanva</div>
-            <div className="text-xs uppercase tracking-[0.22em] text-stone-500">B2B Canvas Production</div>
+          <div className="flex items-center gap-4">
+            <div className="grid h-12 w-12 place-items-center rounded-2xl bg-stone-950 text-sm font-semibold text-white shadow-lg">LC</div>
+            <div>
+                      <div className="text-lg font-semibold tracking-tight">LuxCanva</div>
+            <div className="text-[11px] uppercase tracking-[0.28em] text-stone-500">B2B Canvas Production</div>
+          </div>
           </div>
           <nav className="hidden gap-6 text-sm text-stone-700 md:flex">
             <Link href={`/?lang=${lang}`}>{t.nav.home}</Link>
@@ -281,21 +291,39 @@ export default async function Home({
         </div>
       </header>
 
-      <section className="border-b border-black/10 bg-[linear-gradient(180deg,#fbf7f1_0%,#f6efe4_100%)]">
-        <div className="mx-auto grid min-h-[88vh] max-w-7xl gap-12 px-6 py-10 lg:grid-cols-[1.15fr_.85fr] lg:px-10 lg:py-16">
+      <section className="relative overflow-hidden border-b border-black/10 bg-[radial-gradient(circle_at_top_right,rgba(201,169,110,0.18),transparent_35%),linear-gradient(180deg,#fbf7f1_0%,#f6efe4_100%)]">
+        <div className="mx-auto grid min-h-[88vh] max-w-7xl gap-12 px-6 py-14 lg:grid-cols-[1.05fr_.95fr] lg:px-10 lg:py-20">
           <div className="flex flex-col justify-center">
             <p className="mb-5 text-sm font-medium uppercase tracking-[0.28em] text-stone-600">{t.brandLine}</p>
-            <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-balance sm:text-6xl lg:text-7xl">{t.heroTitle}</h1>
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-stone-900/10 bg-white px-4 py-2 text-xs uppercase tracking-[0.24em] text-stone-600 shadow-sm">European production partner</div>
+            <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-tight text-balance sm:text-6xl lg:text-7xl">{t.heroTitle}</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-700">{t.heroSubtitle}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a className="rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white" href="#contact">{t.ctaPrimary}</a>
               <a className="rounded-full border border-stone-900/20 bg-white px-6 py-3 text-sm font-medium text-stone-950" href="#samples">{t.ctaSecondary}</a>
             </div>
             <div className="mt-8 flex flex-wrap gap-3 text-sm text-stone-700">
+              <span className="rounded-full bg-stone-950 px-4 py-2 text-white">Made in EU</span>
+              <span className="rounded-full bg-white px-4 py-2 shadow-sm">Fast turnaround</span>
               {t.trustBadges.map((badge) => <span key={badge} className="rounded-full border border-stone-900/10 bg-white px-4 py-2">{badge}</span>)}
             </div>
           </div>
           <div className="grid gap-4 self-center">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="overflow-hidden rounded-[2rem] border border-white/60 bg-white shadow-xl">
+                <div className="aspect-[4/5] bg-cover bg-center" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.08)), url(${images.hero})` }} />
+              </div>
+              <div className="grid gap-4">
+                <div className="overflow-hidden rounded-[2rem] border border-white/60 bg-white shadow-xl">
+                  <div className="aspect-[4/3] bg-cover bg-center" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.08)), url(${images.packaging})` }} />
+                </div>
+                <div className="rounded-[2rem] border border-stone-900/10 bg-white p-5 shadow-lg">
+                  <p className="text-xs uppercase tracking-[0.24em] text-stone-500">Production capacity</p>
+                  <p className="mt-2 text-3xl font-semibold">200 / day</p>
+                  <p className="mt-2 text-sm text-stone-600">Large format up to 170 × 300 cm</p>
+                </div>
+              </div>
+            </div>
             {t.heroLabels.map((label, i) => (
               <div key={label} className={`min-h-44 rounded-3xl border border-white/60 bg-cover bg-center shadow-lg ${i === 0 ? 'bg-[linear-gradient(rgba(20,20,20,.20),rgba(20,20,20,.20)),url(https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1200&q=80)]' : i === 1 ? 'bg-[linear-gradient(rgba(20,20,20,.18),rgba(20,20,20,.18)),url(https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80)]' : 'bg-[linear-gradient(rgba(20,20,20,.18),rgba(20,20,20,.18)),url(https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80)]'}`}>
                 <div className="flex h-full items-end p-6 text-white">
@@ -309,6 +337,20 @@ export default async function Home({
 
       <Section title={t.whoTitle} intro={t.whoIntro}>
         <Grid items={t.who.map(([title, text]) => ({ title, text }))} />
+        <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="overflow-hidden rounded-[2rem] border border-stone-900/10 bg-white shadow-lg">
+            <div className="aspect-[4/3] bg-cover bg-center" style={{ backgroundImage: `url(${images.atelier})` }} />
+            <div className="p-5"><p className="text-xs uppercase tracking-[0.24em] text-stone-500">Atelier</p><p className="mt-2 font-medium">Professional workshop</p></div>
+          </div>
+          <div className="overflow-hidden rounded-[2rem] border border-stone-900/10 bg-white shadow-lg">
+            <div className="aspect-[4/3] bg-cover bg-center" style={{ backgroundImage: `url(${images.packaging})` }} />
+            <div className="p-5"><p className="text-xs uppercase tracking-[0.24em] text-stone-500">Packaging</p><p className="mt-2 font-medium">Safe courier-ready packing</p></div>
+          </div>
+          <div className="overflow-hidden rounded-[2rem] border border-stone-900/10 bg-white shadow-lg">
+            <div className="aspect-[4/3] bg-cover bg-center" style={{ backgroundImage: `url(${images.interiors})` }} />
+            <div className="p-5"><p className="text-xs uppercase tracking-[0.24em] text-stone-500">Interior use</p><p className="mt-2 font-medium">Designed for premium spaces</p></div>
+          </div>
+        </div>
       </Section>
 
       <Section title={t.servicesTitle} intro={t.servicesIntro}>

@@ -1,21 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "White-Label Canvas Printing Europe | LuxCanva B2B Fulfillment",
   description:
-    "LuxCanva offers white-label canvas printing, print-on-demand fulfillment and large-format canvas production for ecommerce brands, designers, photographers and resellers across Europe.",
+    "LuxCanva offers white-label canvas printing, print-on-demand fulfillment and large-format canvas production up to 170×300 cm for ecommerce brands, designers, photographers and resellers across Europe.",
 };
 
 export default function RootLayout({
@@ -24,11 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
-    >
-      <body className="min-h-full bg-[#f7f2ea] text-stone-950">{children}</body>
+    <html lang="en" className={`${inter.variable} h-full scroll-smooth`}>
+      <body className="min-h-full" style={{ fontFamily: "var(--font-inter), 'Helvetica Neue', Arial, sans-serif" }}>
+        {children}
+      </body>
     </html>
   );
 }
