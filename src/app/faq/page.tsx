@@ -10,20 +10,16 @@ const copy = {
     eyebrow: "FAQ",
     title: "Frequently Asked Questions",
     faqs: [
-      ["What is your daily production capacity?", "Our workshop can produce up to 200 canvas pieces per day, making us a reliable partner for both high-volume ecommerce operations and large interior decoration projects."],
-      ["What are the maximum canvas sizes you can produce?", "We produce canvas prints up to 170 × 300 cm, including oversized and ultra-large formats. We also produce panoramic canvas for wide-wall installations. For very large or custom projects, contact us with your specifications."],
-      ["Do you offer premium framing options?", "Yes. In addition to standard canvas stretching, we offer premium aluminium frames in silver, gold and black finishes for a gallery-quality presentation."],
-      ["Do you offer 3D relief printing?", "Yes. We offer 3D relief (embossed) printing effects on canvas, adding texture and depth to wall art pieces. This is available for select projects — contact us for details."],
+      ["What is your daily production capacity?", "Our workshop can produce up to 200 canvas pieces per day."],
+      ["What are the maximum canvas sizes you can produce?", "We produce canvas prints up to 170 × 300 cm, including oversized and ultra-large formats."],
+      ["Do you offer premium framing options?", "Yes. We offer premium aluminium frames in silver, gold and black finishes."],
+      ["Do you offer 3D relief printing?", "Yes. We offer 3D relief embossed printing effects on canvas for selected projects."],
       ["Do you offer white-label fulfillment?", "Yes. We can produce and ship canvas prints without LuxCanva branding, directly to your customer."],
       ["Can you ship directly to my customers?", "Yes. We can ship orders directly to end customers, depending on the agreed workflow."],
       ["Do you work with ecommerce stores?", "Yes. We work with Shopify, WooCommerce, marketplace sellers and other online businesses."],
       ["Can I order samples?", "Yes. We recommend ordering samples before starting a B2B partnership."],
       ["Do you offer custom sizes?", "Yes. We can produce custom sizes depending on the technical requirements of the project."],
       ["Do you handle bulk orders?", "Yes. We can produce canvas prints for hotels, offices, restaurants, interior design projects and large ecommerce campaigns."],
-      ["Where are you based?", "LuxCanva is based in Romania, European Union."],
-      ["What types of businesses do you work with?", "We work with ecommerce brands, photographers, artists, interior designers, hotels, restaurants, offices and resellers."],
-      ["Can you include my branding in the package?", "Depending on the project, we can discuss custom inserts or branded packaging options."],
-      ["How do I start?", "Contact us with your business details, estimated volume and product requirements. We will send you pricing and sample options."],
     ],
   },
   ro: {
@@ -31,20 +27,16 @@ const copy = {
     eyebrow: "Întrebări frecvente",
     title: "Întrebări frecvente",
     faqs: [
-      ["Care este capacitatea voastră de producție zilnică?", "Atelierul nostru poate produce până la 200 tablouri canvas pe zi, ceea ce ne face un partener de încredere atât pentru operațiuni ecommerce cu volum mare, cât și pentru proiecte mari de decor interior."],
-      ["Care sunt dimensiunile maxime pe care le puteți produce?", "Producem canvas-uri de până la 170 × 300 cm, inclusiv formate oversized și ultra-mari. Producem și canvas panoramic pentru instalații pe pereți lați. Pentru proiecte mari sau personalizate, contactează-ne cu specificațiile tale."],
-      ["Oferiți opțiuni de rame premium?", "Da. Pe lângă întinderea standard pe șasiu, oferim rame din aluminiu premium în finisaje argintiu, auriu și negru pentru o prezentare de tip galerie."],
-      ["Oferiți print în relief 3D?", "Da. Oferim efecte de print în relief 3D pe canvas, adăugând textură și profunzime pieselor de wall art. Disponibil pentru anumite proiecte — contactează-ne pentru detalii."],
+      ["Care este capacitatea voastră de producție zilnică?", "Atelierul nostru poate produce până la 200 tablouri canvas pe zi."],
+      ["Care sunt dimensiunile maxime pe care le puteți produce?", "Producem canvas-uri de până la 170 × 300 cm, inclusiv formate oversized și ultra-mari."],
+      ["Oferiți opțiuni de rame premium?", "Da. Oferim rame din aluminiu premium în finisaje argintiu, auriu și negru."],
+      ["Oferiți print în relief 3D?", "Da. Oferim efecte de print în relief 3D pe canvas pentru proiecte selectate."],
       ["Oferiți fulfillment white-label?", "Da. Putem produce și expedia canvas-uri fără branding LuxCanva, direct către clientul tău."],
       ["Puteți livra direct către clienții mei?", "Da. Putem livra direct către clientul final, în funcție de fluxul agreat."],
       ["Lucrați cu magazine ecommerce?", "Da. Lucrăm cu Shopify, WooCommerce, selleri din marketplace-uri și alte businessuri online."],
       ["Pot comanda mostre?", "Da. Recomandăm comandarea de mostre înainte de începerea unui parteneriat B2B."],
       ["Oferiți dimensiuni custom?", "Da. Putem produce dimensiuni custom în funcție de cerințele tehnice ale proiectului."],
       ["Gestionați comenzi bulk?", "Da. Putem produce canvas-uri pentru hoteluri, birouri, restaurante, proiecte de design interior și campanii ecommerce mari."],
-      ["Unde aveți sediul?", "LuxCanva are baza în România, Uniunea Europeană."],
-      ["Cu ce tipuri de businessuri lucrați?", "Lucrăm cu branduri ecommerce, fotografi, artiști, designeri de interior, hoteluri, restaurante, birouri și reselleri."],
-      ["Puteți include brandingul meu în pachet?", "În funcție de proiect, putem discuta inserturi personalizate sau opțiuni de ambalare branduită."],
-      ["Cum încep?", "Contactează-ne cu detaliile businessului tău, volumul estimat și cerințele produselor. Îți trimitem prețurile și opțiunile de mostre."],
     ],
   },
 } as const;
@@ -55,15 +47,16 @@ export default async function FaqPage({ searchParams }: { searchParams: Promise<
   const t = copy[lang];
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-20 lg:px-10">
-      <Link href={`/?lang=${lang}`} className="text-sm text-stone-600">← {t.back}</Link>
-      <p className="mt-8 text-sm uppercase tracking-[0.28em] text-stone-500">{t.eyebrow}</p>
-      <h1 className="mt-4 text-5xl font-semibold tracking-tight">{t.title}</h1>
-      <div className="mt-10 space-y-4">
+    <main className="relative z-[1] mx-auto max-w-6xl px-6 py-20 lg:px-10">
+      <Link href={`/?lang=${lang}`} className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm text-stone-700 shadow-sm">← {t.back}</Link>
+      <div className="mt-8 label-premium inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-stone-600">{t.eyebrow}</div>
+      <h1 className="font-display mt-4 text-5xl tracking-tight">{t.title}</h1>
+      <div className="mt-10 grid gap-4 md:grid-cols-2">
         {t.faqs.map(([q, a]) => (
-          <article key={q} className="rounded-3xl border border-stone-900/10 bg-white p-6">
-            <h2 className="text-lg font-medium">{q}</h2>
-            <p className="mt-3 text-stone-700">{a}</p>
+          <article key={q} className="card-premium rounded-[1.75rem] p-6 text-stone-900">
+            <div className="mb-5 h-px w-12 bg-[var(--gold)]" />
+            <h2 className="text-xl font-semibold leading-snug">{q}</h2>
+            <p className="mt-4 text-sm leading-7 text-stone-700">{a}</p>
           </article>
         ))}
       </div>

@@ -54,7 +54,6 @@ type Lang = "en" | "ro";
 export default function ContactPage({ searchParams }: { searchParams: { lang?: string } }) {
   const lang: Lang = searchParams?.lang === "ro" ? "ro" : "en";
   const t = copy[lang];
-
   const [form, setForm] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
@@ -83,19 +82,19 @@ export default function ContactPage({ searchParams }: { searchParams: { lang?: s
   };
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-20 lg:px-10">
-      <Link href={`/?lang=${lang}`} className="text-sm text-stone-600">← {t.back}</Link>
-      <p className="mt-8 text-sm uppercase tracking-[0.28em] text-stone-500">{t.eyebrow}</p>
-      <h1 className="mt-4 text-5xl font-semibold tracking-tight">{t.title}</h1>
+    <main className="relative z-[1] mx-auto max-w-6xl px-6 py-20 lg:px-10">
+      <Link href={`/?lang=${lang}`} className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm text-stone-700 shadow-sm">← {t.back}</Link>
+      <div className="mt-8 label-premium inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-stone-600">{t.eyebrow}</div>
+      <h1 className="font-display mt-4 text-5xl tracking-tight">{t.title}</h1>
       <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">{t.intro}</p>
 
       {status === "success" ? (
-        <div className="mt-10 rounded-[2rem] border border-stone-900/10 bg-white p-10 text-center">
-          <p className="text-2xl font-semibold">{t.successTitle}</p>
+        <div className="card-premium mt-10 rounded-[2rem] p-10 text-center">
+          <p className="text-2xl font-semibold text-stone-900">{t.successTitle}</p>
           <p className="mt-3 text-stone-600">{t.successText}</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="mt-10 grid gap-3 rounded-[2rem] border border-stone-900/10 bg-white p-6">
+        <form onSubmit={handleSubmit} className="card-premium mt-10 grid gap-3 rounded-[2rem] p-6">
           {t.fields.map((f) => (
             <input
               key={f.name}
@@ -105,7 +104,7 @@ export default function ContactPage({ searchParams }: { searchParams: { lang?: s
               value={form[f.name] || ""}
               onChange={handleChange}
               required={f.name === "email"}
-              className="rounded-2xl border border-stone-900/10 bg-[#f7f2ea] px-4 py-3 outline-none"
+              className="rounded-[1.2rem] border border-stone-900/10 bg-white/85 px-4 py-3.5 text-sm outline-none"
             />
           ))}
           <textarea
@@ -114,14 +113,10 @@ export default function ContactPage({ searchParams }: { searchParams: { lang?: s
             rows={6}
             value={form.message || ""}
             onChange={handleChange}
-            className="rounded-2xl border border-stone-900/10 bg-[#f7f2ea] px-4 py-3 outline-none"
+            className="rounded-[1.2rem] border border-stone-900/10 bg-white/85 px-4 py-3.5 text-sm outline-none"
           />
           {status === "error" && <p className="text-sm text-red-600">{t.errorText}</p>}
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            className="w-fit rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white disabled:opacity-60"
-          >
+          <button type="submit" disabled={status === "sending"} className="w-fit rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white shadow-lg disabled:opacity-60">
             {status === "sending" ? t.sending : t.cta}
           </button>
         </form>
