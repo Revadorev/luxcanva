@@ -88,10 +88,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "LuxCanva",
+    "description": "B2B canvas print production workshop in Romania. White-label fulfillment, print-on-demand and large-format canvas printing for European brands.",
+    "url": "https://luxcanva-b2b.vercel.app",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "RO",
+      "addressRegion": "Romania"
+    },
+    "areaServed": "Europe",
+    "serviceType": ["Canvas Printing", "White-Label Fulfillment", "Print on Demand", "Large Format Printing"],
+    "priceRange": "$$"
+  };
+
   return (
     <html lang="en" className={`${manrope.variable} ${playfair.variable} h-full scroll-smooth`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
       </head>
       <body className="min-h-full">{children}</body>
     </html>

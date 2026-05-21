@@ -3,6 +3,14 @@ import { Footer } from "@/components/Footer";
 
 export const metadata = {
   title: "Canvas Printing B2B FAQ | LuxCanva White-Label Fulfillment",
+  description:
+    "Answers to the most common B2B canvas printing questions — production capacity, sizes, white-label fulfillment, bulk orders, custom formats and more.",
+  alternates: { canonical: "https://luxcanva-b2b.vercel.app/faq" },
+  openGraph: {
+    title: "Canvas Printing B2B FAQ | LuxCanva",
+    description: "Common questions about B2B canvas production, fulfillment and print-on-demand at LuxCanva.",
+    url: "https://luxcanva-b2b.vercel.app/faq",
+  },
 };
 
 const copy = {
@@ -47,8 +55,21 @@ export default async function FaqPage({ searchParams }: { searchParams: Promise<
   const lang = params.lang === "ro" ? "ro" : "en";
   const t = copy[lang];
 
+  // FAQ schema - always use EN for structured data (Google indexes EN)
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": copy.en.faqs.map(([q, a]) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": { "@type": "Answer", "text": a }
+    }))
+  };
+
   return (
-    <main className="relative z-[1] mx-auto max-w-6xl px-6 py-20 lg:px-10">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <main className="relative z-[1] mx-auto max-w-6xl px-6 py-20 lg:px-10">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <Link href={`/?lang=${lang}`} className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm text-stone-700 shadow-sm">← {t.back}</Link>
         <div className="flex items-center gap-1 rounded-full border border-stone-900/10 bg-white px-1 py-1 shadow-sm">
@@ -70,5 +91,6 @@ export default async function FaqPage({ searchParams }: { searchParams: Promise<
       </div>
       <Footer lang={lang} />
     </main>
+    </>
   );
 }
