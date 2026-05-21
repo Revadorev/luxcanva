@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Footer } from "@/components/Footer";
 
 const content = {
   en: {
@@ -302,6 +303,7 @@ export default async function Home({
           </div>
         </div>
       </section>
+      <Footer lang={lang} />
     </main>
   );
 }
