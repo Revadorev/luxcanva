@@ -42,8 +42,8 @@ const content = {
       "Direct communication with the production team",
       "Suitable for POD, reseller and bulk workflows",
     ],
-    premiumTitle: "Premium Workshop Strengths",
-    premiumIntro: "These are the production details that make LuxCanva attractive for premium European B2B clients.",
+    premiumTitle: "What Makes Our Production Premium",
+    premiumIntro: "Every order goes through the same quality standards — from print to packaging. These are the details that matter to serious B2B clients.",
     premium: [
       "Large format printing up to 170 × 300 cm",
       "Panoramic wall art production",
@@ -112,8 +112,8 @@ const content = {
       "Comunicare directă cu echipa de producție",
       "Potrivit pentru POD, reselleri și bulk orders",
     ],
-    premiumTitle: "Punctele premium ale atelierului",
-    premiumIntro: "Aceste detalii de producție fac LuxCanva atractiv pentru clienți B2B premium din Europa.",
+    premiumTitle: "Ce face producția noastră premium",
+    premiumIntro: "Fiecare comandă trece prin aceleaşi standarde de calitate — de la print la ambalaj. Acestea sunt detaliile care contează pentru clienții B2B seriosi.",
     premium: [
       "Print large format până la 170 × 300 cm",
       "Producție panoramică pentru wall art",
@@ -261,9 +261,21 @@ export default async function Home({
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {t.premium.map((item) => (
-              <div key={item} className="card-premium rounded-xl p-6">
-                <div className="label-premium mb-4 inline-flex rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-stone-500">Premium</div>
-                <p className="text-base leading-7 text-stone-800">{item}</p>
+              <div key={item} className="card-premium rounded-xl p-5 flex gap-4 items-start">
+                <span style={{
+                  background: "linear-gradient(135deg, #b9935a 0%, #d9bc8f 100%)",
+                  color: "#fff",
+                  borderRadius: "0.5rem",
+                  padding: "0.35rem 0.7rem",
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.18em",
+                  textTransform: "uppercase",
+                  flexShrink: 0,
+                  boxShadow: "0 2px 8px rgba(185,147,90,0.35)",
+                  marginTop: "0.15rem",
+                }}>★</span>
+                <p className="text-base font-medium leading-7 text-stone-800">{item}</p>
               </div>
             ))}
           </div>
