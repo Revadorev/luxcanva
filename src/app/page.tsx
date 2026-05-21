@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import MobileMenu from "./components/MobileMenu";
 
 const content = {
   en: {
@@ -162,12 +163,7 @@ export default async function Home({
               <div className="text-[11px] uppercase tracking-[0.28em] text-stone-500">B2B Canvas Production</div>
             </div>
           </div>
-          <div className="flex items-center gap-2 md:hidden">
-              <div className="flex items-center gap-1 rounded-full border border-stone-900/10 bg-white px-1 py-1 shadow-sm">
-                <Link href="/?lang=en" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "en" ? "lang-active" : "lang-inactive"}`}>EN</Link>
-                <Link href="/?lang=ro" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "ro" ? "lang-active" : "lang-inactive"}`}>RO</Link>
-              </div>
-            </div>
+          <MobileMenu lang={lang} nav={t.nav} ctaPrimary={t.ctaPrimary} />
           <nav className="hidden items-center gap-6 text-sm text-stone-700 md:flex">
             <Link href={`/?lang=${lang}`}>{t.nav.home}</Link>
             <Link href={`/about?lang=${lang}`}>{t.nav.about}</Link>
