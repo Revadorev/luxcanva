@@ -165,6 +165,11 @@ export default async function Home({
             <Link href={`/services?lang=${lang}`}>{t.nav.services}</Link>
             <Link href={`/faq?lang=${lang}`}>{t.nav.faq}</Link>
             <Link href={`/contact?lang=${lang}`}>{t.nav.contact}</Link>
+            <div className="flex items-center gap-1 rounded-full border border-stone-900/10 bg-white px-1 py-1 shadow-sm">
+              <span className="px-2 text-[11px] uppercase tracking-[0.16em] text-stone-500">{t.localeLabel}</span>
+              <Link href="/?lang=en" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "en" ? "bg-stone-950 text-white" : "text-stone-700"}`}>EN</Link>
+              <Link href="/?lang=ro" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "ro" ? "bg-stone-950 text-white" : "text-stone-700"}`}>RO</Link>
+            </div>
             <Link href={`/contact?lang=${lang}`} className="rounded-full bg-stone-950 px-5 py-2.5 text-white">{t.ctaPrimary}</Link>
           </nav>
         </div>

@@ -52,7 +52,14 @@ export default async function ServicesPage({ searchParams }: { searchParams: Pro
 
   return (
     <main className="relative z-[1] mx-auto max-w-7xl px-6 py-20 lg:px-10">
-      <Link href={`/?lang=${lang}`} className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm text-stone-700 shadow-sm">← {t.back}</Link>
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <Link href={`/?lang=${lang}`} className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm text-stone-700 shadow-sm">← {t.back}</Link>
+        <div className="flex items-center gap-1 rounded-full border border-stone-900/10 bg-white px-1 py-1 shadow-sm">
+          <span className="px-2 text-[11px] uppercase tracking-[0.16em] text-stone-500">Language</span>
+          <Link href="/services?lang=en" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "en" ? "bg-stone-950 text-white" : "text-stone-700"}`}>EN</Link>
+          <Link href="/services?lang=ro" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "ro" ? "bg-stone-950 text-white" : "text-stone-700"}`}>RO</Link>
+        </div>
+      </div>
       <div className="mt-8 label-premium inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-stone-600">{t.eyebrow}</div>
       <h1 className="font-display mt-4 text-5xl tracking-tight">{t.title}</h1>
       <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">{t.intro}</p>
