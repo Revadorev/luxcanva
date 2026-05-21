@@ -310,14 +310,14 @@ export default async function Home({
 
 function Section({ title, intro, children, dark = false }: { title: string; intro: string; children: React.ReactNode; dark?: boolean }) {
   return (
-    <section className={`px-6 py-16 lg:px-10 lg:py-20 ${dark ? "lang-active" : ""}`}>
+    <section style={dark ? { background: '#0f0f10', color: '#ffffff' } : {}} className="px-6 py-16 lg:px-10 lg:py-20">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 max-w-3xl">
-          <div className={`${dark ? "bg-white/10 text-stone-300" : "label-premium text-stone-600"} inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em]`}>
+          <div style={dark ? { background: 'rgba(255,255,255,0.10)', color: '#d4cfc8' } : {}} className={`${dark ? '' : 'label-premium text-stone-600'} inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em]`}>
             LuxCanva
           </div>
           <h2 className="font-display mt-6 text-4xl leading-tight tracking-tight sm:text-5xl">{title}</h2>
-          {intro ? <p className={`mt-4 text-lg leading-8 ${dark ? "text-stone-300" : "lang-inactive"}`}>{intro}</p> : null}
+          {intro ? <p style={dark ? { color: '#a8a29e' } : {}} className={`mt-4 text-lg leading-8 ${dark ? '' : 'text-stone-700'}`}>{intro}</p> : null}
         </div>
         {children}
       </div>
@@ -329,10 +329,14 @@ function Grid({ items, dark = false }: { items: { title: string; text?: string }
   return (
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {items.map((item) => (
-        <article key={item.title} className={`${dark ? "border-white/10 bg-white/5 text-white" : "card-premium text-stone-900"} rounded-xl border p-6`}>
-          <div className={`${dark ? "bg-[var(--gold-soft)]" : "bg-[var(--gold)]"} mb-5 h-px w-12`} />
-          <h3 className="text-xl font-semibold leading-snug">{item.title}</h3>
-          {item.text ? <p className={`${dark ? "text-stone-300" : "lang-inactive"} mt-4 text-sm leading-7`}>{item.text}</p> : null}
+        <article
+          key={item.title}
+          style={dark ? { background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.10)" } : {}}
+          className={dark ? "rounded-xl p-6" : "card-premium text-stone-900 rounded-xl p-6"}
+        >
+          <div style={{ background: dark ? "#d9bc8f" : "#b9935a", height: "1px", width: "3rem", marginBottom: "1.25rem" }} />
+          <h3 style={dark ? { color: "#ffffff" } : {}} className="text-xl font-semibold leading-snug">{item.title}</h3>
+          {item.text ? <p style={dark ? { color: "#a8a29e" } : {}} className="mt-4 text-sm leading-7 text-stone-700">{item.text}</p> : null}
         </article>
       ))}
     </div>
