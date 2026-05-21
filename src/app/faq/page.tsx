@@ -10,6 +10,7 @@ const copy = {
     eyebrow: "FAQ",
     title: "Frequently Asked Questions",
     faqs: [
+      ["What is your daily production capacity?", "Our workshop can produce up to 200 canvas pieces per day, making us a reliable partner for both high-volume ecommerce operations and large interior decoration projects."],
       ["What are the maximum canvas sizes you can produce?", "We produce canvas prints up to 170 × 300 cm, including oversized and ultra-large formats. We also produce panoramic canvas for wide-wall installations. For very large or custom projects, contact us with your specifications."],
       ["Do you offer premium framing options?", "Yes. In addition to standard canvas stretching, we offer premium aluminium frames in silver, gold and black finishes for a gallery-quality presentation."],
       ["Do you offer 3D relief printing?", "Yes. We offer 3D relief (embossed) printing effects on canvas, adding texture and depth to wall art pieces. This is available for select projects — contact us for details."],
@@ -30,6 +31,7 @@ const copy = {
     eyebrow: "Întrebări frecvente",
     title: "Întrebări frecvente",
     faqs: [
+      ["Care este capacitatea voastră de producție zilnică?", "Atelierul nostru poate produce până la 200 tablouri canvas pe zi, ceea ce ne face un partener de încredere atât pentru operațiuni ecommerce cu volum mare, cât și pentru proiecte mari de decor interior."],
       ["Care sunt dimensiunile maxime pe care le puteți produce?", "Producem canvas-uri de până la 170 × 300 cm, inclusiv formate oversized și ultra-mari. Producem și canvas panoramic pentru instalații pe pereți lați. Pentru proiecte mari sau personalizate, contactează-ne cu specificațiile tale."],
       ["Oferiți opțiuni de rame premium?", "Da. Pe lângă întinderea standard pe șasiu, oferim rame din aluminiu premium în finisaje argintiu, auriu și negru pentru o prezentare de tip galerie."],
       ["Oferiți print în relief 3D?", "Da. Oferim efecte de print în relief 3D pe canvas, adăugând textură și profunzime pieselor de wall art. Disponibil pentru anumite proiecte — contactează-ne pentru detalii."],

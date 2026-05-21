@@ -12,7 +12,7 @@ const copy = {
     eyebrow: "B2B Services",
     title: "B2B Canvas Printing Services",
     intro:
-      "LuxCanva offers flexible canvas production solutions for companies that need consistent quality, fast turnaround and white-label fulfillment in Europe.",
+      "LuxCanva offers flexible canvas production solutions for companies that need consistent quality, fast turnaround and white-label fulfillment in Europe. Our workshop produces up to 200 canvas pieces per day, with large-format capabilities up to 170×300 cm, premium aluminium frames and 3D relief printing.",
     cta: "Contact Us for B2B Pricing",
     services: [
       ["White-Label Fulfillment", "We produce and ship orders under your brand."],
@@ -20,6 +20,8 @@ const copy = {
       ["Bulk Production", "For large projects, collections, hotels, offices, restaurants and interior designers."],
       ["Custom Size Production", "We can produce standard and custom canvas formats depending on project requirements."],
       ["Large Format Canvas Printing", "We produce oversized and panoramic canvas prints up to 170 × 300 cm — ideal for premium wall art collections, hotel lobbies, commercial spaces and statement interior pieces."],
+      ["3D Relief Printing", "Unique embossed effect on canvas surface, adding texture and depth to wall art. Available for selected projects."],
+      ["Premium Aluminium Frames", "Gallery-quality aluminium frames in silver, gold and black finish — upgrade from standard canvas stretching."],
       ["Packaging & Shipping", "We safely package each canvas for courier transport."],
     ],
   },
@@ -28,7 +30,7 @@ const copy = {
     eyebrow: "Servicii B2B",
     title: "Servicii B2B de print canvas",
     intro:
-      "LuxCanva oferă soluții flexibile de producție canvas pentru companiile care au nevoie de calitate constantă, timp rapid de execuție și fulfillment white-label în Europa.",
+      "LuxCanva oferă soluții flexibile de producție canvas pentru companiile care au nevoie de calitate constantă, timp rapid de execuție și fulfillment white-label în Europa. Atelierul nostru produce până la 200 tablouri canvas pe zi, cu capabilități large-format până la 170×300 cm, rame aluminiu premium și print în relief 3D.",
     cta: "Contactează-ne pentru prețuri B2B",
     services: [
       ["Fulfillment White-Label", "Producem și expediem comenzile sub brandul tău."],
@@ -36,6 +38,8 @@ const copy = {
       ["Producție Bulk", "Pentru proiecte mari, colecții, hoteluri, birouri, restaurante și designeri de interior."],
       ["Producție pe Dimensiuni Custom", "Putem produce formate standard și personalizate în funcție de cerințele proiectului."],
       ["Print Canvas Large Format", "Producem canvas-uri oversized și panoramice până la 170 × 300 cm — ideale pentru colecții premium de wall art, lobby-uri de hotel, spații comerciale și piese de decor statement."],
+      ["Print în Relief 3D", "Efect embossed unic pe suprafața canvas-ului, adăugând textură și profunzime pieselor de wall art. Disponibil pentru proiecte selectate."],
+      ["Rame Aluminiu Premium", "Rame aluminiu de calitate galerie în finisaj argintiu, auriu și negru — upgrade față de întinderea standard pe șasiu."],
       ["Ambalare & Livrare", "Ambalăm în siguranță fiecare canvas pentru transport prin curier."],
     ],
   },
