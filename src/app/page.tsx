@@ -85,6 +85,8 @@ const content = {
       ["170×300 cm", "Producție ultra-large format"],
       ["200/zi", "Capacitate zilnică în atelier"],
       ["Bază în UE", "Producție și fulfillment din România"],
+      ["Relief 3D", "Efect embossed pe canvas"],
+      ["Aluminiu", "Rame Gold · Silver · Negru"],
     ],
     servicesTitle: "O infrastructură de producție pentru creștere B2B",
     servicesIntro:
