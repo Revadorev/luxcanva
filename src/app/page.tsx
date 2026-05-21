@@ -168,10 +168,10 @@ export default async function Home({
             <Link href={`/contact?lang=${lang}`}>{t.nav.contact}</Link>
             <div className="flex items-center gap-1 rounded-full border border-stone-900/10 bg-white px-1 py-1 shadow-sm">
               <span className="px-2 text-[11px] uppercase tracking-[0.16em] text-stone-500">{t.localeLabel}</span>
-              <Link href="/?lang=en" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "en" ? "bg-stone-950 text-white" : "text-stone-700"}`}>EN</Link>
-              <Link href="/?lang=ro" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "ro" ? "bg-stone-950 text-white" : "text-stone-700"}`}>RO</Link>
+              <Link href="/?lang=en" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "en" ? "lang-active" : "lang-inactive"}`}>EN</Link>
+              <Link href="/?lang=ro" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "ro" ? "lang-active" : "lang-inactive"}`}>RO</Link>
             </div>
-            <Link href={`/contact?lang=${lang}`} className="rounded-full bg-stone-950 px-5 py-2.5 text-white">{t.ctaPrimary}</Link>
+            <Link href={`/contact?lang=${lang}`} className="btn-dark">{t.ctaPrimary}</Link>
           </nav>
         </div>
       </header>
@@ -188,8 +188,8 @@ export default async function Home({
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-700">{t.heroSubtitle}</p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a className="rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white shadow-lg" href="#contact">{t.ctaPrimary}</a>
-              <a className="rounded-full border border-stone-900/10 bg-white px-6 py-3 text-sm font-medium text-stone-900 shadow-sm" href="#contact">{t.ctaSecondary}</a>
+              <a className="btn-dark" href="#contact">{t.ctaPrimary}</a>
+              <a className="btn-light" href="#contact">{t.ctaSecondary}</a>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               {t.trustBadges.map((badge) => (
@@ -287,8 +287,8 @@ export default async function Home({
             <h2 className="font-display mt-6 text-4xl leading-tight sm:text-5xl">{t.contactTitle}</h2>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-700">{t.contactText}</p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a className="rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white shadow-lg" href="mailto:horia.petrutiu@kidgps.ro">{t.ctaPrimary}</a>
-              <a className="rounded-full border border-stone-900/10 bg-white px-6 py-3 text-sm font-medium text-stone-900" href="mailto:horia.petrutiu@kidgps.ro">{t.contactAlt}</a>
+              <a className="btn-dark" href="mailto:horia.petrutiu@kidgps.ro">{t.ctaPrimary}</a>
+              <a className="btn-light" href="mailto:horia.petrutiu@kidgps.ro">{t.contactAlt}</a>
             </div>
           </div>
 
@@ -298,7 +298,7 @@ export default async function Home({
                 <input key={f} placeholder={f} className="rounded-[1.2rem] border border-stone-900/10 bg-white/85 px-4 py-3.5 text-sm outline-none" />
               ))}
               <textarea placeholder={t.message} rows={6} className="rounded-[1.2rem] border border-stone-900/10 bg-white/85 px-4 py-3.5 text-sm outline-none" />
-              <button className="mt-2 rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white shadow-lg">{t.quoteCta}</button>
+              <button className="btn-dark">{t.quoteCta}</button>
             </form>
           </div>
         </div>
@@ -310,14 +310,14 @@ export default async function Home({
 
 function Section({ title, intro, children, dark = false }: { title: string; intro: string; children: React.ReactNode; dark?: boolean }) {
   return (
-    <section className={`px-6 py-16 lg:px-10 lg:py-20 ${dark ? "bg-stone-950 text-white" : ""}`}>
+    <section className={`px-6 py-16 lg:px-10 lg:py-20 ${dark ? "lang-active" : ""}`}>
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 max-w-3xl">
           <div className={`${dark ? "bg-white/10 text-stone-300" : "label-premium text-stone-600"} inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em]`}>
             LuxCanva
           </div>
           <h2 className="font-display mt-6 text-4xl leading-tight tracking-tight sm:text-5xl">{title}</h2>
-          {intro ? <p className={`mt-4 text-lg leading-8 ${dark ? "text-stone-300" : "text-stone-700"}`}>{intro}</p> : null}
+          {intro ? <p className={`mt-4 text-lg leading-8 ${dark ? "text-stone-300" : "lang-inactive"}`}>{intro}</p> : null}
         </div>
         {children}
       </div>
@@ -332,7 +332,7 @@ function Grid({ items, dark = false }: { items: { title: string; text?: string }
         <article key={item.title} className={`${dark ? "border-white/10 bg-white/5 text-white" : "card-premium text-stone-900"} rounded-[1.75rem] border p-6`}>
           <div className={`${dark ? "bg-[var(--gold-soft)]" : "bg-[var(--gold)]"} mb-5 h-px w-12`} />
           <h3 className="text-xl font-semibold leading-snug">{item.title}</h3>
-          {item.text ? <p className={`${dark ? "text-stone-300" : "text-stone-700"} mt-4 text-sm leading-7`}>{item.text}</p> : null}
+          {item.text ? <p className={`${dark ? "text-stone-300" : "lang-inactive"} mt-4 text-sm leading-7`}>{item.text}</p> : null}
         </article>
       ))}
     </div>

@@ -45,8 +45,8 @@ export default async function AboutPage({ searchParams }: { searchParams: Promis
         <Link href={`/?lang=${lang}`} className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm text-stone-700 shadow-sm">← {t.back}</Link>
         <div className="flex items-center gap-1 rounded-full border border-stone-900/10 bg-white px-1 py-1 shadow-sm">
           <span className="px-2 text-[11px] uppercase tracking-[0.16em] text-stone-500">Language</span>
-          <Link href="/about?lang=en" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "en" ? "bg-stone-950 text-white" : "text-stone-700"}`}>EN</Link>
-          <Link href="/about?lang=ro" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "ro" ? "bg-stone-950 text-white" : "text-stone-700"}`}>RO</Link>
+          <Link href="/about?lang=en" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "en" ? "lang-active" : "lang-inactive"}`}>EN</Link>
+          <Link href="/about?lang=ro" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "ro" ? "lang-active" : "lang-inactive"}`}>RO</Link>
         </div>
       </div>
       <div className="mt-8 label-premium inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-stone-600">{t.eyebrow}</div>

@@ -88,8 +88,8 @@ export default function ContactPage({ searchParams }: { searchParams: { lang?: s
         <Link href={`/?lang=${lang}`} className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm text-stone-700 shadow-sm">← {t.back}</Link>
         <div className="flex items-center gap-1 rounded-full border border-stone-900/10 bg-white px-1 py-1 shadow-sm">
           <span className="px-2 text-[11px] uppercase tracking-[0.16em] text-stone-500">Language</span>
-          <Link href="/contact?lang=en" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "en" ? "bg-stone-950 text-white" : "text-stone-700"}`}>EN</Link>
-          <Link href="/contact?lang=ro" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "ro" ? "bg-stone-950 text-white" : "text-stone-700"}`}>RO</Link>
+          <Link href="/contact?lang=en" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "en" ? "lang-active" : "lang-inactive"}`}>EN</Link>
+          <Link href="/contact?lang=ro" className={`rounded-full px-3 py-1.5 text-xs font-medium ${lang === "ro" ? "lang-active" : "lang-inactive"}`}>RO</Link>
         </div>
       </div>
       <div className="mt-8 label-premium inline-flex rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-stone-600">{t.eyebrow}</div>
@@ -124,7 +124,7 @@ export default function ContactPage({ searchParams }: { searchParams: { lang?: s
             className="rounded-[1.2rem] border border-stone-900/10 bg-white/85 px-4 py-3.5 text-sm outline-none"
           />
           {status === "error" && <p className="text-sm text-red-600">{t.errorText}</p>}
-          <button type="submit" disabled={status === "sending"} className="w-fit rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white shadow-lg disabled:opacity-60">
+          <button type="submit" disabled={status === "sending"} className="btn-dark">
             {status === "sending" ? t.sending : t.cta}
           </button>
         </form>
