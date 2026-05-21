@@ -5,11 +5,11 @@ export const metadata = {
   title: "About LuxCanva | European Canvas Production Partner",
   description:
     "Learn about LuxCanva — a Romania-based B2B canvas print production workshop. White-label fulfillment, large format production and print-on-demand for European brands.",
-  alternates: { canonical: "https://luxcanva-b2b.vercel.app/about" },
+  alternates: { canonical: "https://whitelabelcanvas.eu/about" },
   openGraph: {
     title: "About LuxCanva | European Canvas Production Partner",
     description: "Romania-based B2B canvas print workshop. White-label fulfillment and large format production for European brands.",
-    url: "https://luxcanva-b2b.vercel.app/about",
+    url: "https://whitelabelcanvas.eu/about",
   },
 };
 

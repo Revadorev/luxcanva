@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const BASE_URL = "https://luxcanva-b2b.vercel.app";
+const BASE_URL = "https://whitelabelcanvas.eu";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

@@ -5,11 +5,11 @@ export const metadata = {
   title: "Canvas Printing B2B FAQ | LuxCanva White-Label Fulfillment",
   description:
     "Answers to the most common B2B canvas printing questions — production capacity, sizes, white-label fulfillment, bulk orders, custom formats and more.",
-  alternates: { canonical: "https://luxcanva-b2b.vercel.app/faq" },
+  alternates: { canonical: "https://whitelabelcanvas.eu/faq" },
   openGraph: {
     title: "Canvas Printing B2B FAQ | LuxCanva",
     description: "Common questions about B2B canvas production, fulfillment and print-on-demand at LuxCanva.",
-    url: "https://luxcanva-b2b.vercel.app/faq",
+    url: "https://whitelabelcanvas.eu/faq",
   },
 };
 

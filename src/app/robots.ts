@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://luxcanva-b2b.vercel.app/sitemap.xml",
+    sitemap: ["https://whitelabelcanvas.eu/sitemap.xml", "https://whitelabelcanvas.ro/sitemap.xml"],
   };
 }

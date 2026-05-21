@@ -5,11 +5,11 @@ export const metadata = {
   title: "B2B Canvas Printing & Print-on-Demand Fulfillment | LuxCanva",
   description:
     "Partner with LuxCanva for European canvas production, white-label fulfillment, bulk canvas printing, custom sizes up to 170×300 cm and professional packaging.",
-  alternates: { canonical: "https://luxcanva-b2b.vercel.app/services" },
+  alternates: { canonical: "https://whitelabelcanvas.eu/services" },
   openGraph: {
     title: "B2B Canvas Printing & Fulfillment Services | LuxCanva",
     description: "White-label canvas fulfillment, POD, bulk production, large format and 3D relief printing. Based in Romania, EU.",
-    url: "https://luxcanva-b2b.vercel.app/services",
+    url: "https://whitelabelcanvas.eu/services",
   },
 };
 
