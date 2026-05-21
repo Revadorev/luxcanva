@@ -272,7 +272,7 @@ export default async function Home({
                   flexShrink: 0,
                   boxShadow: "0 2px 8px rgba(185,147,90,0.35)",
                 }}>★</span>
-                <p className="text-sm font-medium leading-6 text-stone-800">{item}</p>
+                <p className="text-base font-bold leading-6 text-stone-800">{item}</p>
               </div>
             ))}
           </div>
