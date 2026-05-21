@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Footer } from "@/components/Footer";
 
 export const metadata = {
   title: "B2B Canvas Printing & Print-on-Demand Fulfillment | LuxCanva",
@@ -73,6 +74,7 @@ export default async function ServicesPage({ searchParams }: { searchParams: Pro
         ))}
       </div>
       <Link className="mt-10 inline-flex rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white shadow-lg" href={`/contact?lang=${lang}`}>{t.cta}</Link>
+      <Footer lang={lang} />
     </main>
   );
 }

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Footer } from "@/components/Footer";
 
 export const metadata = {
   title: "About LuxCanva | European Canvas Production Partner",
@@ -54,6 +55,7 @@ export default async function AboutPage({ searchParams }: { searchParams: Promis
       <div className="mt-10 grid gap-4 rounded-[2rem] bg-white/70 p-6 shadow-[0_24px_80px_rgba(20,20,20,0.08)] backdrop-blur-sm">
         {t.body.map((p) => <p key={p} className="text-lg leading-8 text-stone-700">{p}</p>)}
       </div>
+      <Footer lang={lang} />
     </main>
   );
 }

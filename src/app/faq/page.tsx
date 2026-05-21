@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Footer } from "@/components/Footer";
 
 export const metadata = {
   title: "Canvas Printing B2B FAQ | LuxCanva White-Label Fulfillment",
@@ -67,6 +68,7 @@ export default async function FaqPage({ searchParams }: { searchParams: Promise<
           </article>
         ))}
       </div>
+      <Footer lang={lang} />
     </main>
   );
 }

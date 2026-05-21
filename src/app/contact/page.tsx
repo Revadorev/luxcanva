@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { Footer } from "@/components/Footer";
 
 const copy = {
   en: {
@@ -128,6 +129,7 @@ export default function ContactPage({ searchParams }: { searchParams: { lang?: s
           </button>
         </form>
       )}
+      <Footer lang={lang} />
     </main>
   );
 }
